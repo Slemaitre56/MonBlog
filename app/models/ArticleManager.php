@@ -92,11 +92,9 @@ class ArticleManager extends DbConnexion
         $db = DbConnexion::openConnexion();
         // Après avoir tout sélectionné selectionné dans la table article
         // On le stoocke dans un tableau
-        $articlesList = [];
-
-        $request = "SELECT * FROM article LEFT JOIN commentaire ON article.id = commentaire.article_id  WHERE article.id =:id";
         
-
+        $request = "SELECT article.content,article.id, article.title, article.image, article.ref_page, article.creation_date, article.update_date,commentaire.commentaire_id, commentaire.user_pseudo, commentaire.message, commentaire.creation_date FROM article LEFT JOIN commentaire ON article.id = commentaire.article_id  WHERE article.id = :id";
+        
         // On prépare et exécute la requête
         $stmt = $db->prepare($request);
         
@@ -104,29 +102,41 @@ class ArticleManager extends DbConnexion
         
         $stmt->execute($params);
 
-        $articleFromDb = $stmt->fetch();
-        
-        // On instancie un nouvel article
-        $article = new Article($articleFromDb['title'], $articleFromDb['content'], $articleFromDb['image'], $articleFromDb['ref_page']);
-        $article->setId($articleFromDb['id']);
-        $article->setCreationDate($articleFromDb['creation_date']);
-        $article->setUpdateDate($articleFromDb['update_date']);
-        var_dump($articleFromDb );
-        die();
-        // foreach ( $articleFromDb as $message => $comment) {
-        //          // On instancie Commentaire
-        //         $comment = new Comment($commentsFromDb['user_pseudo'],$commentsFromDb['content'],$commentsFromDb['article_id']);
-        //         $comment->setId($commentsFromDb['id']);
-        //         $comment->setCreationDate($commentsFromDb['creation_date']);
-        //         $comment->setUpdateDate($commentsFromDb['update_date']);
-        
-        //          $commentsList [] = $comment;
-        //         }
-        $articlesList [] = $article;
-        
-        $db = DbConnexion::closeConnexion();
+        $articleFromDb = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        $article = [];
 
-        return $article;
+$article['comments'] = [];
+
+
+
+foreach ( $articleFromDb as $result) {
+
+    if (count($article) < 2) {
+
+        // On instancie un nouvel article
+
+        $art = new Article($result['title'], $result['content'], $result['image'], $result['ref_page']);
+        $art->setId($result['id']);
+        $art->setCreationDate($result['creation_date']);
+        $art->setUpdateDate($result['update_date']);
+
+        // On push $art dans un array
+        $article["article"] = $art;
+
+    }
+
+    // On instancie un commentaire
+    $comment = new Comment($result['user_pseudo'],$result['message'],$result['id']);
+    $comment->setId($result['commentaire_id']);
+    $comment->setCreationDate($result['creation_date']);
+    $comment->setUpdateDate($result['update_date']);
+
+    // On push $comment dans un array
+    $article["comments"][] = $comment;
+
+    }
+    return $article;
+        
     }
 
 

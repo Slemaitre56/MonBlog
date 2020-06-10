@@ -32,9 +32,9 @@ class DbConnexion
         try {
 
         // 'data' qui renseigne sur le chemain de la base de donnée
-            $cheminConnexion = 'mysql:host=localhost;dbname=monblog';
-            $login = 'root';
-            $pwd = '';
+            $cheminConnexion = 'mysql:localhost;dbname=gretaxao_stephanielemaitre';
+            $login = 'gretaxao_stephanielemaitre';
+            $pwd = 'StephanieLemaitre2020';
 
             // Commande à exécuter lors de la connexion au serveur MySQL. Sera automatiquement ré-exécuté lors d'une reconnexion.
             $arrExtraParam= array(\PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8");

@@ -116,8 +116,7 @@ class Controller{
 
         $articleManager = new \Projet\Models\ArticleManager();
         $article = $articleManager->readOneArticle();
-        // $commentManager = new \Projet\Models\CommentManager();
-        // $commentsList = $commentManager->readComments($_REQUEST['action']);
+        
 
         require "./app/views/frontEnd/pages/article.php";
         

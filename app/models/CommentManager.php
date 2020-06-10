@@ -29,8 +29,8 @@ class CommentManager extends DbConnexion
         $db = DbConnexion::openConnexion();
 
         // On insére dans la table commentaire le pseudo, la date de création, la date de mise à jour, le article_id
-        $request = "INSERT INTO commentaire (user_pseudo, creation_date, update_date, content, article_id) VALUES ";
-        $request .= '( "' . $comment->getUserPseudo() . '", "' . $comment->getCreationDate() . '", "' . $comment->getUpdateDate() . '", "' . $comment->getContent() . '", "' . $comment->getArticleId() . '");';
+        $request = "INSERT INTO commentaire (user_pseudo, creation_date, update_date, message, article_id) VALUES ";
+        $request .= '( "' . $comment->getUserPseudo() . '", "' . $comment->getCreationDate() . '", "' . $comment->getUpdateDate() . '", "' . $comment->getMessage() . '", "' . $comment->getArticleId() . '");';
         
         // On prépare et exécute la requête
         $stmt = $db->prepare($request);
@@ -43,6 +43,7 @@ class CommentManager extends DbConnexion
         $db = DbConnexion::closeConnexion();
 
         return $comment;
+        
         
     }
 

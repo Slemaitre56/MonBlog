@@ -30,7 +30,7 @@
                 class="titrePost"
                 type="text"
                 name="title"
-                placeholder="Titre de l'article*"
+                placeholder="Titre de l'article"
                 required="required">
             <!-- Image -->
             <div class="file">

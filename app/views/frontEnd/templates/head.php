@@ -19,7 +19,6 @@
 
          <!--Feuilles de styles-->
          <link rel="stylesheet" href="./app/public/css/style.css">
-         <link href="node_modules\toastr\build\toastr.css" rel="stylesheet"/>
          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
          <!-- Favicon -->

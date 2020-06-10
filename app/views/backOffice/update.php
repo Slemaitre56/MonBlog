@@ -30,7 +30,7 @@
                 type="text"
                 name="title"
                 placeholder="Titre de l'article*"
-                value="<?= $article->getTitle() ?>"
+                value="<?= $article["article"]->getTitle() ?>"
                 required="required">
             <!-- Image -->    
             <div class="file">
@@ -47,7 +47,7 @@
                     if(isset($_REQUEST['action']) ) : 
                 ?>
                 <select name="ref_page" id="refPage" required="required">
-                    <option value="<?= $article->getRefPage() ?>"><?= $article->getRefPage() ?></option>
+                    <option value="<?= $article["article"]->getRefPage() ?>"><?= $article["article"]->getRefPage() ?></option>
                     <option value="Australie">Australie</option>
                     <option value="Nouvelle-zelande">Nouvelle-Zélande</option>
                     <option value="Trucs_et_astuces">Trucs et Astuces</option>
@@ -63,7 +63,7 @@
                     name="content"
                     placeholder="Veuillez écrire le contenu de l'article *"
                     value=""
-                    required="required"><?= $article->getContent(); ?></textarea>
+                    required="required"><?= $article["article"]->getContent(); ?></textarea>
             </div>
         </div>
         <div class="btnAdmin">          

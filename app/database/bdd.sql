@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `article` (
   `creation_date` date NOT NULL,
   `update_date` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=utf8;
 
 -- Listage des données de la table monblog.article : ~11 rows (environ)
 /*!40000 ALTER TABLE `article` DISABLE KEYS */;
@@ -61,21 +61,22 @@ INSERT INTO `article` (`id`, `ref_page`, `title`, `image`, `content`, `creation_
 
 -- Listage de la structure de la table monblog. commentaire
 CREATE TABLE IF NOT EXISTS `commentaire` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `commentaire_id` int(10) NOT NULL AUTO_INCREMENT,
   `user_pseudo` varchar(255) NOT NULL,
   `article_id` int(11) NOT NULL,
   `message` text NOT NULL,
   `creation_date` date NOT NULL,
   `update_date` date NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY (`commentaire_id`),
   KEY `FK_commentaire_article` (`article_id`),
   CONSTRAINT `FK_commentaire_article` FOREIGN KEY (`article_id`) REFERENCES `article` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table monblog.commentaire : ~1 rows (environ)
+-- Listage des données de la table monblog.commentaire : ~3 rows (environ)
 /*!40000 ALTER TABLE `commentaire` DISABLE KEYS */;
-INSERT INTO `commentaire` (`id`, `user_pseudo`, `article_id`, `message`, `creation_date`, `update_date`) VALUES
-	(3, 'Poupi', 9, 'Bonjour', '2020-05-19', '2020-05-19');
+INSERT INTO `commentaire` (`commentaire_id`, `user_pseudo`, `article_id`, `message`, `creation_date`, `update_date`) VALUES
+	(3, 'Poupi', 9, 'Bonjour', '2020-05-19', '2020-05-19'),
+	(6, 'Poupi Le Retour', 16, 'Whouuuaaa !', '2020-06-08', '2020-06-08');
 /*!40000 ALTER TABLE `commentaire` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
