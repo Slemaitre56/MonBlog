@@ -78,7 +78,11 @@ require_once __DIR__. "/vendor/autoload.php";
 
 // catch = bloc qui gére les exception quand celle-ci est levée
     } catch (Exception $e) {
+<<<<<<< HEAD
 var_dump($e);
+=======
+
+>>>>>>> ac5fab333e5b94de16e753fbe0a8fe3c5ec5018b
         $title = "Page 404 ";
         $description = "Aucune adresse tourvée !";
         require "app/views/frontEnd/404.php";
