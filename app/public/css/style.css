@@ -249,6 +249,11 @@ aside {
 .com {
     margin: 5px;
 }
+.spanCom{
+    text-decoration: underline;
+    color: #443f3f;
+    font-size: 1.05rem;
+}
 .btnCommentaire {
     width: 91%;
     padding: 3px;
@@ -339,8 +344,9 @@ aside {
 }
 .labelContact {
     align-self: center;
-    width: 6%;
+    width: 8%;
     color: #676464;
+    font-size: 1.3rem;
 }
 .nom {
     width: 25%;
@@ -521,7 +527,7 @@ footer a {
 }
 .errorEditer{
     position: absolute;
-    top: 32%;
+    top: 27%;
     font-size: 1.3rem;
     color: #cd2e6a;
 }
@@ -613,6 +619,9 @@ td {
     text-align: justify;
     margin: 20px 0;
     font-size: 1.2rem;
+}
+.savoir{
+    color: rgb(221, 136, 88);
 }
 /*                              |------------------------------------- BOUTON TOP -------------------------------------|                                 */
 #myBtn {
@@ -865,6 +874,7 @@ td {
     .btnAdmin input {
         width: 30%;
     }
+    
     /* ---------------modifier--------------*/
     .tableau {
         width: 100%;

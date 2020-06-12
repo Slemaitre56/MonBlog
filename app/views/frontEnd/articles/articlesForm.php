@@ -23,7 +23,7 @@
                 <?= $article->getCreationDate() ?></p>
             <p class="articleContent">
                 <?= $article->getContent() ?></p>
-            <a title="Article" href="?action=article&id=<?= $article->getId(); ?>">En savoir +</a>
+            <a class="savoir" title="Article" href="?action=article&id=<?= $article->getId(); ?>">En savoir +</a>
         </article>
         <?php
                 endforeach;

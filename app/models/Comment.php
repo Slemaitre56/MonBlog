@@ -22,11 +22,11 @@ class Comment{
 
 // private = visibilité des éléments/propriétés réduit à la classe elle-même
 
-    private $id;
+    private $commentaire_id;
     private $userPseudo;
     private $creationDate;
     private $updateDate;
-    private $content;
+    private $message;
     private $articleId;
 
 
@@ -40,11 +40,11 @@ class Comment{
  public = visiblité totale des éléments
 */ 
 
-    public function __construct($userPseudo, $content, $articleId)
+    public function __construct($userPseudo, $message, $articleId)
     {
 
         $this->setUserPseudo($userPseudo);
-        $this->setContent($content);
+        $this->setMessage($message);
         $this->setArticleId($articleId);
 
         $now = date_create();
@@ -66,12 +66,12 @@ class Comment{
     // getter/setter id
     public function getId()
     {
-        return $this->id;
+        return $this->commentaire_id;
     }
 
-    public function setId($id)
+    public function setId($commentaire_id)
     {
-        $this->id = $id;
+        $this->commentaire_id = $commentaire_id;
         return $this;
     }
 
@@ -112,14 +112,14 @@ class Comment{
     }
 
     // getter/setter contenu
-    public function getContent()
+    public function getMessage()
     {
-        return $this->content;
+        return $this->message;
     }
 
-    public function setContent($content)
+    public function setMessage($message)
     {
-        $this->content = $content;
+        $this->message = $message;
         return $this;
     }
 

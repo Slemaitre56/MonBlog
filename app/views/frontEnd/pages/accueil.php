@@ -45,15 +45,15 @@
             <div class="slider slider2">
                 <ul id="slider-list">
                     <li>
-                        <img src="app/public/images/slider2/slide2.1.JPG"></li>
+                        <img src="./app/public/images/slider2/slide2.1.JPG"></li>
                     <li>
-                        <img src="app/public/images/slider2/slide2.2.JPG"></li>
+                        <img src="./app/public/images/slider2/slide2.2.JPG"></li>
                     <li>
-                        <img src="app/public/images/slider2/slide2.3.JPG"></li>
+                        <img src="./app/public/images/slider2/slide2.3.JPG"></li>
                     <li>
-                        <img src="app/public/images/slider2/slide2.4.JPG"></li>
+                        <img src="./app/public/images/slider2/slide2.4.JPG"></li>
                     <li>
-                        <img src="app/public/images/slider2/slide2.5.JPG"></li>
+                        <img src="./app/public/images/slider2/slide2.5.JPG"></li>
                 </ul>
             </div>
             <div class="intro">
