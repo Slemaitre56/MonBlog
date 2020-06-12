@@ -32,16 +32,16 @@ class DbConnexion
         try {
 
         // 'data' qui renseigne sur le chemain de la base de donnée
-            $host = 'mysql:host=localhost';
-            $dbname = 'dbname=gretaxao_stephanielemaitre';
-            $login = 'gretaxao_stephanielemaitre';
-            $pwd = 'StephanieLemaitre2020';
+            $host = 'mysql://b56bdf89e808bf:fa61d5e7@eu-cdbr-west-03.cleardb.net/heroku_8c50333f9c011b4?reconnect=true';
+            $dbname = 'dbname=heroku_8c50333f9c011b4';
+            $login = 'b56bdf89e808bf';
+            $pwd = 'fa61d5e7';
 
             // Commande à exécuter lors de la connexion au serveur MySQL. Sera automatiquement ré-exécuté lors d'une reconnexion.
             $arrExtraParam= array(\PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8");
 
             // pdo = php data objet
-            $pdo = new \PDO($host, $dbname, $login, $pwd);
+            $pdo = new \PDO($host,$dbname,$login,$pwd,$arrExtraParam);
         
             // constantes pour gérer les erreurs
             $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);

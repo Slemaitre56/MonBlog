@@ -28,15 +28,15 @@
             <div class="slider">
                 <ul id="slider-list">
                     <li>
-                        <img src="app/public/images/slider1/slide1.1.JPG"></li>
+                        <img src="app/public/images/slider1/slide1.1.jpg"></li>
                     <li>
-                        <img src="app/public/images/slider1/slide1.2.JPG"></li>
+                        <img src="app/public/images/slider1/slide1.2.jpg"></li>
                     <li>
-                        <img src="app/public/images/slider1/slide1.3.JPG"></li>
+                        <img src="app/public/images/slider1/slide1.3.jpg"></li>
                     <li>
-                        <img src="app/public/images/slider1/slide1.4.JPG"></li>
+                        <img src="app/public/images/slider1/slide1.4.jpg"></li>
                     <li>
-                        <img src="app/public/images/slider1/slide1.5.JPG"></li>
+                        <img src="app/public/images/slider1/slide1.5.jpg"></li>
                 </ul>
             </div>
         </article>
@@ -45,13 +45,13 @@
             <div class="slider slider2">
                 <ul id="slider-list">
                     <li>
-                        <img src="./app/public/images/slider2/slide2.1.JPG"></li>
+                        <img src="./app/public/images/slider2/slide2.1.jpg"></li>
                     <li>
-                        <img src="./app/public/images/slider2/slide2.2.JPG"></li>
+                        <img src="./app/public/images/slider2/slide2.2.jpg"></li>
                     <li>
-                        <img src="./app/public/images/slider2/slide2.3.JPG"></li>
+                        <img src="./app/public/images/slider2/slide2.3.jpg"></li>
                     <li>
-                        <img src="./app/public/images/slider2/slide2.4.JPG"></li>
+                        <img src="./app/public/images/slider2/slide2.4.jpg"></li>
                     <li>
                         <img src="./app/public/images/slider2/slide2.5.JPG"></li>
                 </ul>
