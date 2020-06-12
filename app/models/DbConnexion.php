@@ -32,7 +32,8 @@ class DbConnexion
         try {
 
         // 'data' qui renseigne sur le chemain de la base de donnée
-            $cheminConnexion = 'mysql:localhost;dbname=gretaxao_stephanielemaitre';
+            $host = 'mysql:host=localhost';
+            $dbname = 'dbname=gretaxao_stephanielemaitre';
             $login = 'gretaxao_stephanielemaitre';
             $pwd = 'StephanieLemaitre2020';
 
@@ -40,7 +41,7 @@ class DbConnexion
             $arrExtraParam= array(\PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8");
 
             // pdo = php data objet
-            $pdo = new \PDO($cheminConnexion, $login, $pwd);
+            $pdo = new \PDO($host, $dbname, $login, $pwd);
         
             // constantes pour gérer les erreurs
             $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);

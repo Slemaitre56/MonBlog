@@ -39,13 +39,8 @@ class CommentManager extends DbConnexion
         $comment->setId($lastId);
         $db = DbConnexion::closeConnexion();
 
-<<<<<<< HEAD
         return $comment;      
-=======
-        return $comment;
-        
-        
->>>>>>> ac5fab333e5b94de16e753fbe0a8fe3c5ec5018b
+        return $comment;  
     }
 }
 

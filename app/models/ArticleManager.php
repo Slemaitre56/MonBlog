@@ -104,12 +104,10 @@ class ArticleManager extends DbConnexion
 
         $articleFromDb = $stmt->fetchAll(\PDO::FETCH_ASSOC);
         $article = [];
-<<<<<<< HEAD
-        $article['comments'] = [];
-=======
 
-$article['comments'] = [];
->>>>>>> ac5fab333e5b94de16e753fbe0a8fe3c5ec5018b
+        $article['comments'] = [];
+        $article['comments'] = [];
+
 
 
 
