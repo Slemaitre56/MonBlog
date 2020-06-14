@@ -32,7 +32,7 @@ class DbConnexion
         try {
 
         // 'data' qui renseigne sur le chemain de la base de donnée
-            $host = 'mysql://b56bdf89e808bf:fa61d5e7@eu-cdbr-west-03.cleardb.net/heroku_8c50333f9c011b4?reconnect=true';
+            $host = 'mysql:eu-cdbr-west-03.cleardb.net';
             $dbname = 'dbname=heroku_8c50333f9c011b4';
             $login = 'b56bdf89e808bf';
             $pwd = 'fa61d5e7';
