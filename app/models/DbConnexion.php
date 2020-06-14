@@ -32,10 +32,18 @@ class DbConnexion
         try {
 
         // 'data' qui renseigne sur le chemain de la base de donnée
+        if (getenv('DB_HOST')) {
+            $host = getenv('DB_HOST');
+            $dbname =  getenv('DB_NAME');
+            $user = getenv('DB_USER');
+            $pwd = getenv('DB_PASSWORD');
+        }else{
             $host = $_ENV['DB_HOST'];
             $dbname =  $_ENV['DB_NAME'];
             $user = $_ENV['DB_USER'];
             $pwd = $_ENV['DB_PASSWORD'];
+        }
+            
 
             // pdo = php data objet
             $pdo = new \PDO('mysql:host='.$host.';dbname='.$dbname."charset=utf8",$user,$pwd);
