@@ -43,8 +43,7 @@ class DbConnexion
             $user = $_ENV['DB_USER'];
             $pwd = $_ENV['DB_PASSWORD'];
         }
-            
-
+    
             // pdo = php data objet
             $pdo = new \PDO('mysql:host='.$host.';dbname='.$dbname.";charset=utf8",$user,$pwd);
         
