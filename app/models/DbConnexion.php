@@ -46,7 +46,7 @@ class DbConnexion
             
 
             // pdo = php data objet
-            $pdo = new \PDO('mysql:host='.$host.';dbname='.$dbname."charset=utf8",$user,$pwd);
+            $pdo = new \PDO('mysql:host='.$host.';dbname='.$dbname.";charset=utf8",$user,$pwd);
         
             // constantes pour gérer les erreurs
             $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
