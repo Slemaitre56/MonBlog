@@ -942,7 +942,88 @@ td {
         width: 100%;
     }
     aside {
-        display: none;
+        width:100%;
+    }
+    .api{
+        margin: auto;
+        width: 80%;
+    }
+    /* -----------commentaire-----------*/
+    .zoneText {
+        width: 100%;
+        text-align: center;
+    }
+    .showCommentaire {
+        width: 100%;
+    }
+    .contenuCom {
+        width: 100%;
+        margin: 15px;
+    }
+    /*------------ footer------------ */
+    footer {
+        font-size: 0.7rem;
+    }
+    .soc-icons {
+        width: 25%;
+    }
+    /* ------------pages articles----------- */
+    .article {
+        min-width: 100%;
+    }
+    /* -------------contact------------- */
+    .containerTrois h1 {
+        margin: 50px 0;
+    }
+    .ssTitre {
+        width: 80%;
+    }
+    .infosPerso input {
+        width: 100%;
+        margin: 20px 0;
+    }
+    #message {
+        width: 100%;
+    }
+    .submitContact {
+        width: 40%;
+        height: 40px;
+    }
+    .labelContact {
+        width: 100%;
+    }
+    /* ---------------Creer--------------*/
+    .titrePost {
+        width: 100%;
+    }
+    .blocTitrePost {
+        margin: 0;
+    }
+    .file {
+        width: 100%;
+        margin: 50px 0;
+    }
+    .btnAdmin input {
+        width: 30%;
+    }
+    
+    /* ---------------modifier--------------*/
+    .tableau {
+        width: 100%;
+    }
+    .tableau > table {
+        border: none;
+    }
+    tbody > tr, .hautTableau{
+        font-size: 1rem;
+    }
+    /* ---------------inscription/connexion--------------*/
+    .formInscrip{
+        width: 70%;
+    }
+    /* ---------------modal--------------*/
+    .modal{
+        width: 60%;
     }
 }
 
