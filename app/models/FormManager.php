@@ -37,7 +37,11 @@ class FormManager
             $_SESSION['success'] = 1;
             $mail ='stephanie.lemaitre56@gmail.com';
             $message = $_POST["message"];
-            $headers = "From : Mon blog Austra Zelandia";
+            $headers = array(
+                'From' => $_POST['email'],
+                'Reply-To' => $_POST['email'],
+                'X-Mailer' => 'PHP/' . phpversion()
+            );
             mail($mail,'Formulaire de contact', $message, $headers);
             header('location: index.php?action=contact');
         }
