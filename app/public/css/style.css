@@ -282,7 +282,7 @@ aside {
 .blocArticles {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: start;
     flex-wrap: wrap;
 }
 .article {
