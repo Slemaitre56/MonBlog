@@ -35,13 +35,12 @@ class FormManager
             header('location: index.php?action=contact');
         }else{
             $_SESSION['success'] = 1;
+            $email = $_POST['email'];
             $mail ='stephanie.lemaitre56@gmail.com';
-            $message = $_POST["message"];
-            $headers = array(
-                'From' => $_POST['email'],
-                'Reply-To' => $_POST['email'],
-                'X-Mailer' => 'PHP/' . phpversion()
-            );
+            $message = "<h4> Contenu du message : </h4>".$_POST["message"];
+            $headers  = 'De: '.$email."\r\n".
+            'Reply-To: '.$email."\r\n" .
+            'X-Mailer: PHP/' . phpversion();
             mail($mail,'Formulaire de contact', $message, $headers);
             header('location: index.php?action=contact');
         }
