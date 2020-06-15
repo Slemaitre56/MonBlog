@@ -65,6 +65,8 @@ if (file_exists(__DIR__ . "/.env")) {
             $controller->form();
         }elseif($_GET["action"] == "cgu"){
             $controller->cgu();
+        }elseif($_GET["action"] == "siteMap"){
+            $controller->siteMap();
         }elseif($_GET["action"] == "cookie"){
             $controller->cookie();
         }elseif($_GET["action"] == "newComment"){

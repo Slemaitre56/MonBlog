@@ -10,7 +10,7 @@
                 <a title="CGU" href='?action=cgu'>Conditions générales d'utilisation -</a>
             </p>
             <p>
-                <a title="Site Map" href="#">Site Map</a>
+                <a title="Site Map" href='?action=siteMap'>Site Map</a>
             </p>
 
             <!-- Réseaux sociaux -->

@@ -11,6 +11,7 @@ namespace Projet\Controllers;
                                 |                             6/ Fonction article                                   |
                                 |                             7/ Fonction Form                                      |
                                 |                             8/ Fonction CGU                                       |
+                                |                             8/ Fonction Site Map                                  |
                                 |                                                                                   |                                                              
                                 |-----------------------------------------------------------------------------------|
 */
@@ -150,6 +151,14 @@ class Controller{
 
     function cookie(){
         require "./app/views/frontEnd/cookie/cookie.php"; 
+    }
+
+
+//                              |---------------------------------- 9/ Fonction site Map --------------------------------|
+
+
+    function siteMap(){
+        require "./app/views/frontEnd/siteMap.php"; 
     }
 
 
