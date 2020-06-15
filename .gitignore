@@ -1,2 +1,3 @@
 creds.js
 /vendor/
+.env
