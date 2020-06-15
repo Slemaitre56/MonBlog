@@ -54,5 +54,4 @@
 		<div><a href="https://projetkercode.herokuapp.com/?action=article&id=16">Mon blog Austra-Zelandia - Article</a></div>
 
 		<div><a href="https://projetkercode.herokuapp.com/?action=article&id=75">Mon blog Austra-Zelandia - Article</a></div>
-</div><div class="footerinfo">Created with <a href="https://www.mysitemapgenerator.com/sitemaps/index.html" target="_blank">MySitemapGenerator</a></div></body>
-</html>
+</div>

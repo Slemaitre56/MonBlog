@@ -1,9 +1,11 @@
+
+<?php require "./app/views/frontEnd/templates/head.php"; ?>
 <h1>Conditions générales d'utilisation</h1>
 En vigueur au 27/04/2020
  
 Les présentes conditions générales d'utilisation (dites « CGU ») ont pour objet l'encadrement juridique des modalités de mise à disposition du site et des services par moi et de définir les conditions d’accès et d’utilisation des services par « l'Utilisateur ».
 Les présentes CGU sont accessibles sur le site à la rubrique «CGU».
-<h2>Article 1 : Les mentions légales</h2>
+<h2>ARTICLE 1 : Les mentions légales</h2>
 L’édition et la direction de la publication du site www.monblog.com est assurée par Lemaitre, domicilié 4 rue du safran.
 Numéro de téléphone est 06.06.06.79.21
 Adresse e-mail steph.lema@gmail.com.

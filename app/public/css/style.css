@@ -851,15 +851,7 @@ td {
 .siteMapBody div.PageBreak span {
     font-weight: bold;
 }
-.siteMapBody div.footerinfo {
-    margin-top: 16px;
-    color: #666;
-    font-size: 12px;
-    text-align: right;
-}
-.siteMapBody div.footerinfo * {
-    font-size: 12px;
-}
+
 
 /*
                                 | -----------------------------------MEDIAQUERY------------------------------------ |
