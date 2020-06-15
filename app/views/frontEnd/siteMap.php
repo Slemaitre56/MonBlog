@@ -7,12 +7,10 @@
 			<meta name="generator" content="Mystemapgenerator.com HTML Sitemap" />
 			<meta charset="utf-8" />
 			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
-			<link rel="stylesheet" href="style.css">
+			<link rel="stylesheet" href="./app/public/css/style.css">
 		<style type="text/css">
 					* { box-sizing:border-box; }
 
-			@media only screen and (max-width:800px) { .siteMapBody div.section div { width:50%; } div.section { -webkit-column-count:2; -moz-column-count:2; column-count:2; } }
-			@media only screen and (max-width:500px) { .siteMapBody div.section div { width:100%; } div.section { -webkit-column-count:1; -moz-column-count:1; column-count:1; } div.section p:after, div.section p a:after { display:none; } }
 		</style>
 		</head>
 		<body class=siteMapBody>
