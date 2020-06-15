@@ -2,7 +2,9 @@
 RewriteEngine On
 RewriteRule ^admin$  admin.php?action=connexion [L]
 
-
+# 301 --- https://projetkercode.herokuapp.com/?action=trucs_et_astuces => https://projetkercode.herokuapp.com/trucs_et_astuces
+RewriteCond %{QUERY_STRING} (^|&)action\=australie($|&)
+RewriteRule ^$/australie? [L,R=301]
 
 
 
