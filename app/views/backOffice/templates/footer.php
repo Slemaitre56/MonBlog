@@ -13,7 +13,6 @@
         <!-- scripts js -->
         <script src="app/public/js/plugin.js"></script>
         <script src="app/public/js/active.js"></script>
-        <script src="toastr.js"></script>
 
     </body>
 </html>

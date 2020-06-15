@@ -23,12 +23,11 @@
             </div>
         </footer>
             <!-- scripts js -->
+            <script src="app/public/js/meteo.js"></script>
             <script src="app/public/js/plugin.js"></script>
             <script src="app/public/js/active.js"></script>
             <script src="app/public/js/creds.js"></script>
-            <script src="app/public/js/meteo.js"></script>
             <script src="app/public/js/btnTop.js"></script>
             <script src="app/public/js/modal.js"></script>
-            <script src="node_modules\toastr\build\toastr.min.js"></script>
     </body>
 </html>
