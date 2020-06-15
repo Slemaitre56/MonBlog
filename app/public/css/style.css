@@ -1111,6 +1111,29 @@ td {
     .labelContact {
         width: 100%;
     }
+    @media screen and (min-width:1390px) {
+
+    /* -------------Menu principal------------- */    
+        .menu-principa{
+            width: 75%;
+        }
+    /* -------------contact------------- */
+
+    .infosPerso input {
+        width: 100%;
+        margin: 20px 0;
+    }
+    #message {
+        width: 100%;
+    }
+    .submitContact {
+        width: 40%;
+        height: 40px;
+    }
+    .labelContact {
+        width: 100%;
+    }
+    }
     
 }
 /*
