@@ -38,6 +38,7 @@ class FormManager
             $message = $_POST["message"];
             $headers = "From : Mon blog Austra Zelandia";
             mail('dev.stephaniel@gmail.com','Formulaire de contact', $message, $headers);
+            var_dump(mail('dev.stephaniel@gmail.com','Formulaire de contact', $message, $headers));
             header('location: index.php?action=contact');
         }
     }
