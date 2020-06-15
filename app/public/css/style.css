@@ -34,7 +34,7 @@ header {
 .active{
     background-color: rgb(221, 136, 88);
     border-radius: 25px;
-    margin: 5px;
+    
 }
 .menu ul li a:hover {
     background-color: rgb(221, 136, 88);
@@ -1043,7 +1043,7 @@ td {
         display: none;
     }
     .menu ul{
-        margin-top: 5%;
+        margin-top: 3%;
     }
     /* ------------container------------ */
     .intro {
