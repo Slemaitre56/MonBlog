@@ -21,10 +21,10 @@
                     <!-- Menu principal -->
                         <ul id="menuActive" class="liens-nav">                         
                             <li class="nav">
-                                <a title="Accueil" href='?action=accueil'> Accueil</a>
+                                <a title="Accueil" href='accueil'> Accueil</a>
                             </li>
                             <li class="nav">
-                                <a title="Australie" href='?action=australie'> Australie</a>
+                                <a title="Australie" href='australie'> Australie</a>
                             </li>
                             <li class="nav">
                                 <a title="Nouvelle-Zelande" href='?action=nouvelle-zelande'> Nouvelle-Zélande</a>
