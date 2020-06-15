@@ -1067,7 +1067,29 @@ td {
     .file > label {
         font-size: 1rem;
     }
-    
+    /* ---------------BTn top--------------*/
+    #myBtn{
+        bottom: 50px;
+    }
+    /* -----------commentaire-----------*/
+    .zoneText {
+        width: 100%;
+        text-align: center;
+    }
+    .showCommentaire {
+        width: 100%;
+    }
+    .contenuCom {
+        width: 100%;
+        margin: 15px;
+    }
+    /*------------ footer------------ */
+    footer {
+        font-size: 0.7rem;
+    }
+    .soc-icons {
+        width: 25%;
+    }
     
 }
 /*
