@@ -1126,14 +1126,14 @@ td {
         width: 60%;
     }    
 }
-    @media screen and (max-width:1390px) {
+    @media screen and (max-width:1415px) {
 
     /* -------------Menu principal------------- */    
         .menu-principal{
             width: 75%;
         }
     /* ------------container------------ */
-    /* .intro {
+    .intro {
         width: 100%;
     }
     .intro h1 {
@@ -1141,7 +1141,8 @@ td {
     }
     aside h4 {
         margin-top: 50px;
-    }     */
+        font-size: 1.3rem;
+    }
     /* -------------contact------------- */
 
     .infosPerso input {
