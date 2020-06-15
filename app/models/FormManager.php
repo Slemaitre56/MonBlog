@@ -24,6 +24,10 @@ class FormManager
             $errors['email'] = "Vous n'avez pas renseigné correctement votre email";
         }
 
+        if(!array_key_exists('message', $_POST) || $_POST['message'] == ''){
+            $errors['message'] = "Vous n'avez pas renseigné votre message";
+        }
+
         if(!empty($errors)){
             
             $_SESSION['errors'] = $errors;
@@ -31,12 +35,10 @@ class FormManager
             header('location: index.php?action=contact');
         }else{
             $_SESSION['success'] = 1;
+            $mail ='stephanie.lemaitre56@gmail.com';
             $message = $_POST["message"];
             $headers = "From : Mon blog Austra Zelandia";
-            $mail = mail('dev.stephaniel@gmail.com','Formulaire de contact', $message, $headers);
-            if ($mail) {
-              $errors['message'] = "Vous n'avez pas renseigné votre message";  
-            }
+            mail($mail,'Formulaire de contact', $message, $headers);
             header('location: index.php?action=contact');
         }
     }
