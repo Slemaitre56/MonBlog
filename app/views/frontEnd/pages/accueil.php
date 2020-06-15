@@ -28,15 +28,15 @@
             <div class="slider">
                 <ul id="slider-list">
                     <li>
-                        <img src="app/public/images/slider1/autralie.1.jpg" alt="photo australie"></li>
+                        <img src="app/public/images/slider1/australie.1.jpg" alt="photo australie"></li>
                     <li>
-                        <img src="app/public/images/slider1/autralie.2.jpg" alt="photo australie"></li>
+                        <img src="app/public/images/slider1/australie.2.jpg" alt="photo australie"></li>
                     <li>
-                        <img src="app/public/images/slider1/autralie.3.jpg" alt="photo australie"></li>
+                        <img src="app/public/images/slider1/australie.3.jpg" alt="photo australie"></li>
                     <li>
-                        <img src="app/public/images/slider1/autralie.4.jpg" alt="photo australie"></li>
+                        <img src="app/public/images/slider1/australie.4.jpg" alt="photo australie"></li>
                     <li>
-                        <img src="app/public/images/slider1/autralie.5.jpg" alt="photo australie"></li>
+                        <img src="app/public/images/slider1/australie.5.jpg" alt="photo australie"></li>
                 </ul>
             </div>
         </article>
