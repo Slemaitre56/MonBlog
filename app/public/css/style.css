@@ -1132,6 +1132,16 @@ td {
         .menu-principal{
             width: 75%;
         }
+    /* ------------container------------ */
+    .intro {
+        width: 100%;
+    }
+    .intro h1 {
+        margin-bottom: 50px;
+    }
+    aside h4 {
+        margin-top: 50px;
+    }    
     /* -------------contact------------- */
 
     .infosPerso input {
