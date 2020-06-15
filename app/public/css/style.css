@@ -31,15 +31,15 @@ header {
     text-decoration: none;
     padding: 10px;
 }
-.active{
+.active {
     background-color: rgb(221, 136, 88);
     border-radius: 25px;
-    
+
 }
 .menu ul li a:hover {
     background-color: rgb(221, 136, 88);
     border-radius: 25px;
-    
+
 }
 .menu ul li {
     list-style: none;
@@ -254,7 +254,7 @@ aside {
 .com {
     margin: 5px;
 }
-.spanCom{
+.spanCom {
     text-decoration: underline;
     color: #443f3f;
     font-size: 1.05rem;
@@ -530,7 +530,7 @@ footer a {
     color: white;
     font-size: 1.4rem;
 }
-.errorEditer{
+.errorEditer {
     position: absolute;
     top: 27%;
     font-size: 1.3rem;
@@ -625,7 +625,7 @@ td {
     margin: 20px 0;
     font-size: 1.2rem;
 }
-.savoir{
+.savoir {
     color: rgb(221, 136, 88);
 }
 /*                              |------------------------------------- BOUTON TOP -------------------------------------|                                 */
@@ -758,13 +758,102 @@ td {
     font-size: 20px;
     font-weight: bold;
 }
-.errorLogin{
+.errorLogin {
     position: absolute;
     top: 120px;
     font-size: 1.1rem;
     color: #cd2e6a;
 }
-
+/*                              |------------------------- ---------- Site Map ----------- -------------------------|                                  */
+.siteMapBody {
+    background: #fff;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 5px;
+    font: 14px "Arial", Tahoma, sans-serif;
+}
+.siteMapBody h1 {
+    font-size: 26px;
+}
+.siteMapBody div.section {
+    overflow: hidden;
+    width: 100%;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    padding-top: 50px;
+}
+.siteMapBody div.section div {
+    display: inline-block;
+    border: #ccc solid 1px;
+    border-radius: 5px;
+    width: 30%;
+    min-width: 300px;
+    max-width: 99%;
+    margin: 16px 1%;
+    padding: 12px;
+    background: #fff;
+    box-shadow: 0 3px 3px #666;
+}
+.siteMapBody div.section div:before {
+    display: block;
+    content: "";
+    position: relative;
+    left: 50%;
+    width: 1px;
+    height: 32px;
+    margin: -44px 0 12px 4px;
+    background: #ccc;
+}
+.siteMapBody div.section p {
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    margin-top: -50px;
+}
+.siteMapBody div.section p:after {
+    display: block;
+    content: "";
+    position: relative;
+    width: 67.5%;
+    max-width: 656px;
+    height: 1px;
+    box-sizing: border-box;
+    margin: -14px auto 0;
+    background: #ccc;
+}
+.siteMapBody div.section p a {
+    margin: 0 auto;
+    float: none;
+    color: #E1B6B6;
+}
+.siteMapBody div.section p a:after {
+    display: block;
+    content: "";
+    position: relative;
+    left: 50%;
+    width: 1px;
+    height: 32px;
+    background: #ccc;
+}
+.siteMapBody div.PageBreak {
+    margin-top: 16px;
+}
+.siteMapBody div.PageBreak span {
+    font-weight: bold;
+}
+.siteMapBody div.footerinfo {
+    margin-top: 16px;
+    color: #666;
+    font-size: 12px;
+    text-align: right;
+}
+.siteMapBody div.footerinfo * {
+    font-size: 12px;
+}
 
 /*
                                 | -----------------------------------MEDIAQUERY------------------------------------ |
@@ -879,7 +968,7 @@ td {
     .btnAdmin input {
         width: 30%;
     }
-    
+
     /* ---------------modifier--------------*/
     .tableau {
         width: 100%;
@@ -887,18 +976,19 @@ td {
     .tableau > table {
         border: none;
     }
-    tbody > tr, .hautTableau{
+    .hautTableau,
+    tbody > tr {
         font-size: 1rem;
     }
     .file > label {
         text-align: none;
     }
     /* ---------------inscription/connexion--------------*/
-    .formInscrip{
+    .formInscrip {
         width: 70%;
     }
     /* ---------------modal--------------*/
-    .modal{
+    .modal {
         width: 60%;
     }
 }
@@ -950,10 +1040,10 @@ td {
         width: 100%;
     }
     aside {
-        width:100%;
+        width: 100%;
         height: 40vh;
     }
-    .api{
+    .api {
         margin: auto;
         width: 80%;
     }
@@ -1018,7 +1108,7 @@ td {
     .file > label {
         text-align: none;
     }
-    
+
     /* ---------------modifier--------------*/
     .tableau {
         width: 100%;
@@ -1026,19 +1116,19 @@ td {
     .tableau > table {
         border: none;
     }
-    tbody > tr, .hautTableau{
+    .hautTableau,
+    tbody > tr {
         font-size: 1rem;
     }
     /* ---------------inscription/connexion--------------*/
-    .formInscrip{
+    .formInscrip {
         width: 70%;
     }
     /* ---------------modal--------------*/
-    .modal{
+    .modal {
         width: 60%;
     }
 }
-
 
 @media screen and (max-width:1000px) {
     /* -----------header------------- */
@@ -1048,11 +1138,11 @@ td {
     .menu-mobile {
         display: none;
     }
-    .menu ul{
+    .menu ul {
         margin-top: 3%;
     }
     .menu ul li a {
-        font-size: 1.1rem;;
+        font-size: 1.1rem;
     }
     /* ------------container------------ */
     .intro {
@@ -1074,7 +1164,7 @@ td {
         font-size: 1rem;
     }
     /* ---------------BTn top--------------*/
-    #myBtn{
+    #myBtn {
         bottom: 50px;
     }
     /* -----------commentaire-----------*/
@@ -1118,20 +1208,20 @@ td {
         width: 100%;
     }
     /* ---------------inscription/connexion--------------*/
-    .formInscrip{
+    .formInscrip {
         width: 70%;
     }
     /* ---------------modal--------------*/
-    .modal{
+    .modal {
         width: 60%;
-    }    
+    }
 }
-    @media screen and (max-width:1415px) {
+@media screen and (max-width:1415px) {
 
-    /* -------------Menu principal------------- */    
-        .menu-principal{
-            width: 75%;
-        }
+    /* -------------Menu principal------------- */
+    .menu-principal {
+        width: 75%;
+    }
     /* ------------container------------ */
     .intro {
         width: 100%;
@@ -1160,22 +1250,21 @@ td {
         width: 100%;
     }
     /* ---------------inscription/connexion--------------*/
-    .formInscrip{
+    .formInscrip {
         width: 50%;
     }
     /* ---------------modal--------------*/
-    .modal{
+    .modal {
         width: 60%;
     }
 }
-    
 
 /*
                                 | -------------------------------------PLUGIN-------------------------------------- |
                                 |                                                                                   | 
                                 |-----------------------------------------------------------------------------------|
 */
-.cursor{
+.cursor {
     width: 3rem;
     height: 3rem;
     position: absolute;
