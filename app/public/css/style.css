@@ -829,6 +829,12 @@ td {
     margin: 0 auto;
     float: none;
     color: #E1B6B6;
+    font-size: 1.1rem;
+}
+.siteMapBody div.section div a {
+    text-decoration: none;
+    color: #E1B6B6;
+    
 }
 .siteMapBody div.section p a:after {
     display: block;
@@ -837,7 +843,7 @@ td {
     left: 50%;
     width: 1px;
     height: 32px;
-    background: #ccc;
+    background: #8d3d3d;
 }
 .siteMapBody div.PageBreak {
     margin-top: 16px;
