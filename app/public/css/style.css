@@ -31,7 +31,11 @@ header {
     text-decoration: none;
     padding: 10px;
 }
-.active,
+.active{
+    background-color: rgb(221, 136, 88);
+    border-radius: 25px;
+    margin: 5px;
+}
 .menu ul li a:hover {
     background-color: rgb(221, 136, 88);
     border-radius: 25px;
@@ -1037,6 +1041,9 @@ td {
     }
     .menu-mobile {
         display: none;
+    }
+    .menu ul{
+        margin-top: 5%;
     }
     /* ------------container------------ */
     .intro {
