@@ -1,8 +1,9 @@
 
 RewriteEngine On
 RewriteRule ^admin$  admin.php?action=connexion [L]
-RewriteRule ^([^/]*)$ /index.php?action=$1 [L]
-RewriteRule ^([^/]*)$ /admin.php?action=$1 [L]
+RewriteCond %{QUERY_STRING} (^|&)action=trucs_et_astuces($|&)
+RewriteRule ^index\.php$ /trucs_et_astuces?&%{QUERY_STRING}
+
 
 #redirection vers page erreur
 #ErrorDocument 404 /404.php
