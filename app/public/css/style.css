@@ -1090,6 +1090,27 @@ td {
     .soc-icons {
         width: 25%;
     }
+    /* -------------contact------------- */
+    .containerTrois h1 {
+        margin: 50px 0;
+    }
+    .ssTitre {
+        width: 80%;
+    }
+    .infosPerso input {
+        width: 100%;
+        margin: 20px 0;
+    }
+    #message {
+        width: 100%;
+    }
+    .submitContact {
+        width: 40%;
+        height: 40px;
+    }
+    .labelContact {
+        width: 100%;
+    }
     
 }
 /*
