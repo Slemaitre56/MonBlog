@@ -1111,7 +1111,7 @@ td {
     .labelContact {
         width: 100%;
     }
-    @media screen and (min-width:1390px) {
+    @media screen and (max-width:1390px) {
 
     /* -------------Menu principal------------- */    
         .menu-principa{
