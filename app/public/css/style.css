@@ -896,7 +896,7 @@ td {
 }
 @media screen and (min-width:585px) and (max-width:992px) {
     body {
-        max-width: 576px;
+        max-width: 992px;
     }
     .logo {
         display: none;
