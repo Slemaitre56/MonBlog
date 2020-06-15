@@ -1034,7 +1034,7 @@ td {
 }
 
 
-@media screen and (max-width:992px) {
+@media screen and (max-width:1000px) {
     /* -----------header------------- */
     .menu-principal {
         width: 80%;
@@ -1111,6 +1111,14 @@ td {
     .labelContact {
         width: 100%;
     }
+    /* ---------------inscription/connexion--------------*/
+    .formInscrip{
+        width: 70%;
+    }
+    /* ---------------modal--------------*/
+    .modal{
+        width: 60%;
+    }    
 }
     @media screen and (max-width:1390px) {
 
@@ -1133,6 +1141,14 @@ td {
     }
     .labelContact {
         width: 100%;
+    }
+    /* ---------------inscription/connexion--------------*/
+    .formInscrip{
+        width: 70%;
+    }
+    /* ---------------modal--------------*/
+    .modal{
+        width: 60%;
     }
 }
     
