@@ -3,11 +3,10 @@ RewriteEngine On
 RewriteRule ^admin$  admin.php?action=connexion [L]
 
 # 301 --- https://projetkercode.herokuapp.com/?action=trucs_et_astuces => https://projetkercode.herokuapp.com/trucs_et_astuces
-#RewriteCond %{QUERY_STRING} (^|&)action\=trucs_et_astuces($|&)
-#RewriteRule ^$ /trucs_et_astuces? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)action\=$1($|&)
+RewriteRule ^$ /$1? [L,R=301]
 
-//301 Redirect Entire Directory
-RedirectMatch 301 https://projetkercode.herokuapp.com/?action=(.*) https://projetkercode.herokuapp.com/$1
+
 
 #redirection vers page erreur
 #ErrorDocument 404 /404.php
