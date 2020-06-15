@@ -890,6 +890,9 @@ td {
     tbody > tr, .hautTableau{
         font-size: 1rem;
     }
+    .file > label {
+        text-align: none;
+    }
     /* ---------------inscription/connexion--------------*/
     .formInscrip{
         width: 70%;
@@ -1011,6 +1014,9 @@ td {
     }
     .btnAdmin input {
         width: 30%;
+    }
+    .file > label {
+        text-align: none;
     }
     
     /* ---------------modifier--------------*/
@@ -1144,7 +1150,7 @@ td {
     }
     /* ---------------inscription/connexion--------------*/
     .formInscrip{
-        width: 70%;
+        width: 50%;
     }
     /* ---------------modal--------------*/
     .modal{
