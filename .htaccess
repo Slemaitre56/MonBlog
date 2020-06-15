@@ -3,7 +3,7 @@ RewriteEngine On
 RewriteRule ^admin$  admin.php?action=connexion [L]
 
 
-RewriteRule /trucs_et_astuces? (^|&)action\=trucs_et_astuces($|&)[L,R=301]
+RewriteRule ^/australie?$ (^|&)action\=australie($|&)[L,R=301]
 
 
 
