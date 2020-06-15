@@ -764,7 +764,7 @@ td {
     font-size: 1.1rem;
     color: #cd2e6a;
 }
-/*                              |------------------------- ---------- Site Map ----------- -------------------------|                                  */
+/*                              |------------------------------------ Site Map -------------------------------------|                                  */
 .siteMapBody {
     background: #fff;
     max-width: 980px;
@@ -1258,7 +1258,30 @@ td {
         width: 60%;
     }
 }
-
+@media only screen and (max-width:800px) {
+    .siteMapBody div.section div {
+        width: 50%;
+    }
+    div.section {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+@media only screen and (max-width:500px) {
+    .siteMapBody div.section div {
+        width: 100%;
+    }
+    div.section {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+    div.section p a:after,
+    div.section p:after {
+        display: none;
+    }
+}
 /*
                                 | -------------------------------------PLUGIN-------------------------------------- |
                                 |                                                                                   | 

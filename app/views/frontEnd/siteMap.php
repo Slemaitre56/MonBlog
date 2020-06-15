@@ -7,6 +7,7 @@
 			<meta name="generator" content="Mystemapgenerator.com HTML Sitemap" />
 			<meta charset="utf-8" />
 			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+			<link rel="stylesheet" href="style.css">
 		<style type="text/css">
 					* { box-sizing:border-box; }
 
