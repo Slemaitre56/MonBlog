@@ -1,7 +1,7 @@
 
 RewriteEngine On
 RewriteRule ^admin$  admin.php?action=connexion [L]
-RewriteRule ^https://projetkercode.herokuapp.com/$1$  https://projetkercode.herokuapp.com/admin.php?action=$1 [L]
+
 
 
 
