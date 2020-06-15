@@ -31,7 +31,7 @@ class DbConnexion
         // try = bloc qui contient du code pouvant générer des erreurs
         try {
 
-        // 'data' qui renseigne sur le chemain de la base de donnée
+        // Voir .env (récupére information dans heroku)
         if (getenv('DB_HOST')) {
             $host = getenv('DB_HOST');
             $dbname =  getenv('DB_NAME');

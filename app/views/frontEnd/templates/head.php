@@ -15,7 +15,8 @@
          <meta name="keywords" content="Blog Voyage Australie Nouvelle-Zelande">
          <meta
              name="description"
-             content=<?= $description ?>>
+             content="<?= $description ?>"
+             >
 
          <!--Feuilles de styles-->
          <link rel="stylesheet" href="./app/public/css/style.css">

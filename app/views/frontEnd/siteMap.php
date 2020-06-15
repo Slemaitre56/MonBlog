@@ -16,7 +16,7 @@
 			div.section div:before { display:block; content: ""; position:relative; left:50%; width:1px; height:32px; margin:-44px 0 12px 4px; background:#ccc; }
 			div.section p { font-weight:bold; text-align:center; overflow:hidden; position:absolute; width:100%; left:0; margin-top:-50px; }
 			div.section p:after { display:block; content: ""; position:relative; width:67.5%; max-width:656px; height:1px; box-sizing:border-box; margin:-14px auto 0 auto; background:#ccc; }
-			div.section p a { margin:0 auto; float:none; }
+			div.section p a { margin:0 auto; float:none;color:#E1B6B6 }
 			div.section p a:after { display:block; content: ""; position:relative; left:50%; width:1px; height:32px; background:#ccc; }
 			div.PageBreak { margin-top:16px; }
 			div.PageBreak span { font-weight:bold; }
