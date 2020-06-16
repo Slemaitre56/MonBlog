@@ -11,7 +11,7 @@
         // déclaration de variable pour récupérer la valeur de l'input
         let city = $("#city").val();
         // déclaration de variable pour récupérer la valeur de la clé mit ans le fichier .creds.js      
-        let token = $_ENV('TOKEN');
+        let token = creds.token;
 
         // Si la variable city est différent de vide
         if(city != "") {
