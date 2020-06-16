@@ -39,6 +39,7 @@ class FormManager
             $message = "Contenu du message :".$_POST["message"];
 
             mail($mail,'Formulaire de contact', $message);
+            var_dump(mail($mail,'Formulaire de contact', $message));
             // header('location: index.php?action=contact');
         }
     }
