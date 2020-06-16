@@ -30,7 +30,7 @@ function createArticle(){
     }else{
         $title = "Administration - Créer un article ";
         $description = "Sur cette page vous pouvez créer un article !";
-        require "./app/views/backOffice/edit.php";
+        header('Location: /admin.php?action=ancien');
     }
     
 }

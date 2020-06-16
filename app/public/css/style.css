@@ -536,6 +536,7 @@ footer a {
 }
 .errorEditer {
     position: absolute;
+    right: 30%;
     top: 27%;
     font-size: 1.3rem;
     color: #cd2e6a;
