@@ -275,10 +275,13 @@ foreach ( $articleFromDb as $result) {
                         // On prépare et exécute la requête
                         $stmt = $db->prepare($request);
                         $stmt->execute($params);
-                        $db = DbConnexion::closeConnexion();                     
+                        $db = DbConnexion::closeConnexion();
+                        unset($_POST['title']);
+                        unset($_POST['content']);                     
                     }
                 } else {
                     return "Votre image est trop lourde ! 1Mo max !";
+                    
                 }
             } else {
                 return "Le format de votre image est incorrect ! jpg, png et jpeg uniquement !";
