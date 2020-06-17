@@ -139,6 +139,8 @@ class Controller{
 
 
     function cgu(){
+        $title = "Mon blog Austra-Zelandia - Article ";
+        $description = "Vous trouverez ici le cgu !";
         require "./app/views/frontEnd/pages/cgu.php"; 
     }
 

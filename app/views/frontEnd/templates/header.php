@@ -21,19 +21,19 @@
                     <!-- Menu principal -->
                         <ul id="menuActive" class="liens-nav">                         
                             <li class="nav">
-                                <a title="Accueil" href='?action=accueil'> Accueil</a>
+                                <a title="Accueil" href='accueil'> Accueil</a>
                             </li>
                             <li class="nav">
-                                <a title="Australie" href='?action=australie'> Australie</a>
+                                <a title="Australie" href='australie'> Australie</a>
                             </li>
                             <li class="nav">
-                                <a title="Nouvelle-Zelande" href='?action=nouvelle-zelande'> Nouvelle-Zélande</a>
+                                <a title="Nouvelle-Zelande" href='nouvelle-zelande'> Nouvelle-Zélande</a>
                             </li>
                             <li class="nav">
-                                <a title="Trucs et Astuces" href='?action=trucs_et_astuces'> Trucs et astuces</a>
+                                <a title="Trucs et Astuces" href='trucs_et_astuces'> Trucs et astuces</a>
                             </li>
                             <li class="nav">
-                                <a title="Contact" href='?action=contact'> Contact</a>
+                                <a title="Contact" href='contact'> Contact</a>
                             </li>
                         </ul>
             </div>
