@@ -127,7 +127,7 @@ class Controller{
     function form(){
         $formManager = new \Projet\Models\FormManager();
         $contact = $formManager->contact();
-        
+        header('location: index.php?action=contact');
     }
 
     
