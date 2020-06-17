@@ -55,7 +55,7 @@ class FormManager
 
             // Envoi du mail
             $mail = new SendGrid\Mail($from,$subject,$to,$content);
-            $apiKey = $_ENV["SENDGRID_API_KEY"];
+            $apiKey = getenv("SENDGRID_API_KEY");
             $sg = new \SendGrid($apiKey);
 
             $response = $sg->client->mail()->send()->post($mail);
