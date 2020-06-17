@@ -10,7 +10,7 @@ use SendGrid;
                                 |                                                                                   |                                                             
                                 |-----------------------------------------------------------------------------------|
 */
-require __DIR__ . '<PATH_TO>/vendor/autoload.php';
+
 class FormManager
 {
 
