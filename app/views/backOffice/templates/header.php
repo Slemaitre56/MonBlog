@@ -19,11 +19,11 @@
                 <!-- Menu principal -->
                     <ul id="menuActive" class="liens-nav">
                         <li class="nav">
-                            <a title="Créer un nouvel Article" href='editer'> Nouvel article
+                            <a title="Créer un nouvel Article" href='admin.php?action=editer'> Nouvel article
                             </a>
                         </li>
                         <li class="nav">
-                            <a title="Voir la liste des articles" href='ancien'> Anciens Articles
+                            <a title="Voir la liste des articles" href='admin.php?action=ancien'> Anciens Articles
                             </a>
                         </li>
                     </ul>
