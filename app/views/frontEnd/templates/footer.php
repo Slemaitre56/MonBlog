@@ -23,13 +23,10 @@
             </div>
         </footer>
             <!-- scripts js -->
-            <script type="text/javascript">
-    let phpVars = {};
-    <?php foreach($vars as $var) {
-        echo 'phpVars.push[' . $var . '];';
-    };
-    ?>
-</script>
+            <script>
+            let phpVars = {};
+            phpVars["TOKEN"] = "<?= $_ENV["TOKEN"]; ?>"        
+            </script>
             <script src="app/public/js/meteo.js"></script>
             <script src="app/public/js/plugin.js"></script>
             <script src="app/public/js/active.js"></script>

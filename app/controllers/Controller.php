@@ -28,7 +28,6 @@ class Controller{
     function accueil() { 
         $title = "Mon blog Austra-Zelandia ";
         $description = "Bienvenue sur le blog sur mon voyage en Australie et en Nouvelle-Zelande !";   
-        $vars = $_ENV();
         require "./app/views/frontEnd/pages/accueil.php";
     }
 
