@@ -7,10 +7,10 @@
             <!-- CGU + Site map -->
             <p>
                 &copy;2020 Monblog -
-                <a title="CGU" href='?action=cgu'>Conditions générales d'utilisation -</a>
+                <a title="CGU" href='cgu'>Conditions générales d'utilisation -</a>
             </p>
             <p>
-                <a title="Site Map" href='?action=siteMap'>Site Map</a>
+                <a title="Site Map" href='siteMap'>Site Map</a>
             </p>
 
             <!-- Réseaux sociaux -->
@@ -30,7 +30,6 @@
             <script src="app/public/js/meteo.js"></script>
             <script src="app/public/js/plugin.js"></script>
             <script src="app/public/js/active.js"></script>
-            <script src="app/public/js/creds.js"></script>
             <script src="app/public/js/btnTop.js"></script>
             <script src="app/public/js/modal.js"></script>
     </body>
