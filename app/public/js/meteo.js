@@ -19,7 +19,7 @@
 
                 // Une api est une url - via les paramètres on récupère les données
                 url: "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric" +
-                        "&APPID=" + creds.token,
+                        "&APPID=" + phpVars[6],
 
                 // On récupère les données       
                 type: "GET",
