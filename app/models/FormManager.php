@@ -59,8 +59,10 @@ class FormManager
             $sg = new \SendGrid($apiKey);
 
             $response = $sg->client->mail()->send()->post($mail);
-
-            var_dump($response);
+            echo $response->statusCode();
+            echo $response->headers();
+            echo $response->body();
+            
             header('location: index.php?action=contact');
         }
     }
