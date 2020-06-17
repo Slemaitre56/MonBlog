@@ -7,7 +7,7 @@
     <header>
         <!-- Image SVG -->
         <div class="logo">
-            <a title="Retour à la page d'accueil" href="index.php?action=accueil"><img src="/../../app/public/images/koala1.svg" alt="image svg"></a>
+            <a title="Retour à la page d'accueil" href="accueil"><img src="/../../app/public/images/koala1.svg" alt="image svg"></a>
         </div>
         <!-- Menu burger -->
         <nav class="menu-principal">
@@ -19,11 +19,11 @@
                 <!-- Menu principal -->
                     <ul id="menuActive" class="liens-nav">
                         <li class="nav">
-                            <a title="Créer un nouvel Article" href='admin.php?action=editer'> Nouvel article
+                            <a title="Créer un nouvel Article" href='editer'> Nouvel article
                             </a>
                         </li>
                         <li class="nav">
-                            <a title="Voir la liste des articles" href='admin.php?action=ancien'> Anciens Articles
+                            <a title="Voir la liste des articles" href='ancien'> Anciens Articles
                             </a>
                         </li>
                     </ul>

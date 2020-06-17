@@ -6,7 +6,7 @@
 
         <footer>
             <p>
-                <a title="se deconnecter" href='admin.php?action=logout'>Se déconnecter en administrateur</a>
+                <a title="se deconnecter" href='logout'>Se déconnecter en administrateur</a>
             </p>
 
         </footer>
