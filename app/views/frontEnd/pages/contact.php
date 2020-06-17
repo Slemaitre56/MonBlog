@@ -72,5 +72,5 @@
     unset($_SESSION['errors']);  
 ?>
 </main>
-    <?php include 'app/views/frontEnd/templates/footer.php'; ?>
-    <script>menuAct(4);</script>
+<?php include 'app/views/frontEnd/templates/footer.php'; ?>
+<script>menuAct(4);</script>

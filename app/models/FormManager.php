@@ -42,7 +42,7 @@ class FormManager
             $nom = $_POST['nom'];
             $email = $_POST['email'];
             $message = $_POST['message'];
-            var_dump($nom);
+
             // Contenu
             $from = new SendGrid\Email("Stéphanie Lemaitre","stephanie.lemaitre56@gmail.com");
             $subject = "Formulaire de contact";
@@ -50,7 +50,7 @@ class FormManager
             $content = new SendGrid\Content("text\html","
             Email : {$email}<br>
             Utilisateur : {$nom}<br>
-            Message : {$message}<br>
+            Message : {$message}
             ");
 
             // Envoi du mail

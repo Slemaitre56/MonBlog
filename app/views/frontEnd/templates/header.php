@@ -16,7 +16,7 @@
             <div class="menu">
                 <input type="checkbox" id="menu-mobile" role="button">
                     <label for="menu-mobile" class="menu-mobile">
-                        <img src="app/public/images/menu.svg">
+                        <img src="app/public/images/menu.svg" alt="image menu burger">
                     </label>
                     <!-- Menu principal -->
                         <ul id="menuActive" class="liens-nav">                         
