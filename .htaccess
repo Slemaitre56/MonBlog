@@ -1,8 +1,8 @@
 
 RewriteEngine On
 RewriteRule ^admin$  admin.php?action=connexion [L]
-RewriteRule ^([^\.]+)$  index.php?action=$1 [NC,L]
-RewriteRule ^([^\.]+)$  admin.php?action=$1 [NC,L]
+RewriteRule ^([^\.]+)$  [a-z].php?action=$1 [NC,L]
+
 
 #redirection vers page erreur
 #ErrorDocument 404 /404.php
