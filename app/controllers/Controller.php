@@ -43,8 +43,6 @@ class Controller{
         
         $articleManager = new \Projet\Models\ArticleManager();
         $articlesList = $articleManager->readArticles($_REQUEST['action']);
-        // $commentManager = new \Projet\Models\CommentManager();
-        // $commentsList = $commentManager->readComments($_REQUEST['action']);
         
         require "./app/views/frontEnd/pages/australie.php";
         

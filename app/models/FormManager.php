@@ -1,6 +1,8 @@
 <?php 
 namespace Projet\Models;
 
+use SendGrid;
+
 /*
                                 | ----------------------------------FORMMANAGER------------------------------------ | 
                                 |                                                                                   |
@@ -8,7 +10,7 @@ namespace Projet\Models;
                                 |                                                                                   |                                                             
                                 |-----------------------------------------------------------------------------------|
 */
-
+require __DIR__ . '<PATH_TO>/vendor/autoload.php';
 class FormManager
 {
 
@@ -35,12 +37,31 @@ class FormManager
             header('location: index.php?action=contact');
         }else{
             $_SESSION['success'] = 1;
-            $mail ='stephanie.lemaitre56@gmail.com';
-            $message = "Contenu du message :".$_POST["message"];
 
-            mail($mail,'Formulaire de contact', $message);
-            var_dump(mail($mail,'Formulaire de contact', $message));
-            // header('location: index.php?action=contact');
+            // data
+            $nom = $_POST['nom'];
+            $email = $_POST['email'];
+            $message = $_POST['message'];
+            var_dump($nom);
+            // Contenu
+            $from = new SendGrid\Email("Stéphanie Lemaitre","stephanie.lemaitre56@gmail.com");
+            $subject = "Formulaire de contact";
+            $to = new SendGrid\Email("Stéphanie Lemaitre","dev.stephaniel@gmail.com");
+            $content = new SendGrid\Content("text\html","
+            Email : {$email}<br>
+            Utilisateur : {$nom}<br>
+            Message : {$message}<br>
+            ");
+
+            // Envoi du mail
+            $mail = new SendGrid\Mail($from,$subject,$to,$content);
+            $apiKey = $_ENV["SENDGRID_API_KEY"];
+            $sg = new \SendGrid($apiKey);
+
+            $response = $sg->client->mail()->send()->post($mail);
+
+            var_dump($response);
+            header('location: index.php?action=contact');
         }
     }
 }
