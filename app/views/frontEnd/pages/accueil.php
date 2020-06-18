@@ -6,7 +6,7 @@
 
 <!-- Appel des templates head et hearder -->
 <?php require "app/views/frontEnd/templates/head.php"; ?>
-<?php require "app/views/frontEnd/templates/header.php"; phpinfo();?>
+<?php require "app/views/frontEnd/templates/header.php";?>
 
 <!-- MAIN -->
 <main class="container">
