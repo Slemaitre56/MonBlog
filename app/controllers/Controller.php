@@ -61,9 +61,6 @@ class Controller{
         $articleManager = new \Projet\Models\ArticleManager();
         $articlesList = $articleManager->readArticles($_REQUEST['action']);
 
-        // $commentManager = new \Projet\Models\CommentManager();
-        // $commentsList = $commentManager->readComments($_REQUEST['action']);
-
         require "./app/views/frontEnd/pages/n-Zelande.php";
         
     }
@@ -80,9 +77,6 @@ class Controller{
         
         $articleManager = new \Projet\Models\ArticleManager();
         $articlesList = $articleManager->readArticles($_REQUEST['action']);
-
-        // $commentManager = new \Projet\Models\CommentManager();
-        // $commentsList = $commentManager->readComments($_REQUEST['action']);
 
         require "./app/views/frontEnd/pages/trucs.php";
         
@@ -127,7 +121,7 @@ class Controller{
     function form(){
         $formManager = new \Projet\Models\FormManager();
         $contact = $formManager->contact();
-        header('location: index.php?action=contact');
+        
     }
 
     
