@@ -46,4 +46,4 @@
 
 <!-- Appel le template footer -->
 <?php include './app/views/backOffice/templates/footer.php'; ?>
-<script>menuAct(3); </script>
+<script>menuAct(4); </script>
