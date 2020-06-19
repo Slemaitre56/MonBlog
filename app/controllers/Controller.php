@@ -119,8 +119,11 @@ class Controller{
 
     function form(){
         $form = new \Projet\Models\Form($_REQUEST['email'],$_REQUEST['nom'],$_REQUEST['message']);
-        \Projet\Models\FormManager::createContact($form);
+        $objet = new \Projet\Models\FormManager();
+        $errors = $objet->createContact($form);
         require "./app/views/frontEnd/pages/contact.php";
+        
+        
     }
 
     

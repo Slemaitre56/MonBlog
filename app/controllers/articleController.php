@@ -22,7 +22,6 @@ class ArticleController{
 function createArticle(){
     
     $article = new \Projet\Models\Article($_REQUEST['title'],$_REQUEST['content'],$_FILES['image'],$_REQUEST['ref_page']);
-    
     $objet = new \Projet\Models\ArticleManager();
     $errors = $objet->createArticle($article);
     if(empty($errors)){       
