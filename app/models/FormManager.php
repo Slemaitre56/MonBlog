@@ -135,8 +135,7 @@ class FormManager
         // Pour créer un commentaire
         // On se connecte à la base de donnée
         $db = DbConnexion::openConnexion();
-
-        // On insére dans la table commentaire le pseudo, la date de création, la date de mise à jour, le article_id
+        
         $request = "INSERT INTO contact (email, nom, message) VALUES ";
         $request .= '( "' . $form->getEmail() . '", "' . $form->getNom() . '", "' . $form->getMessage() .'");';
         
@@ -151,18 +150,21 @@ class FormManager
         $db = DbConnexion::closeConnexion();
 
     }
+
+
+
     // Fonction afficher tous les mails
     public function readAllContact(): array
     {
         // On se connecte à la base de donnée
         $db = DbConnexion::openConnexion();
 
-        // Après avoir tout sélectionné dans la table article
+        // Après avoir tout sélectionné dans la table contact
         // On le stoocke dans un tableau
         $mailsAllList = [];
 
-        // On séléctionne tout dans la table article
-        $request = "SELECT * FROM article" ;
+        // On séléctionne tout dans la table contact
+        $request = "SELECT * FROM contact" ;
 
         // On prépare et exécute la requête
         $stmt = $db->prepare($request);
@@ -174,11 +176,11 @@ class FormManager
          Ne permet pas d'appeler plusieurs colonnes du même nom
         */
         while ($mailsFromDb = $stmt->fetch(\PDO::FETCH_ASSOC)) {
-            // On instancie un nouvel article
-            $articleAll = new Article($mailsFromDb['email'], $mailsFromDb['nom'], $mailsFromDb['message']);
-            $articleAll->setId($mailsFromDb['id']);
+            // On instancie un nouvel contact
+            $mailAll = new Form($mailsFromDb['email'], $mailsFromDb['nom'], $mailsFromDb['message']);
+            $mailAll->setId($mailsFromDb['id']);
 
-            $mailsAllList [] = $articleAll;
+            $mailsAllList [] = $mailAll;
         }
 
         $db = DbConnexion::closeConnexion();
