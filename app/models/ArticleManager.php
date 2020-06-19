@@ -280,11 +280,11 @@ foreach ( $articleFromDb as $result) {
                         unset($_POST['content']);                     
                     }
                 } else {
-                    $errors = "Votre image est trop lourde ! 1Mo max !";
+                    return "Votre image est trop lourde ! 1Mo max !";
                     
                 }
             } else {
-                $errors = "Le format de votre image est incorrect ! jpg, png et jpeg uniquement !";
+                return "Le format de votre image est incorrect ! jpg, png et jpeg uniquement !";
             }
         }
     }
