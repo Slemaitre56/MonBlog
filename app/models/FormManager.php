@@ -93,7 +93,7 @@ class FormManager
                 $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
                 //Recipients
-                $mail->setFrom('noreply@AustraZelandia.com', 'Formulaire de contact');
+                $mail->setFrom('stephanie.lemaitre56@gmail.com', 'Formulaire de contact');
                 $mail->addAddress('stephanie.lemaitre56@gmail.com');     // Add a recipient
                 // $mail->addReplyTo('info@example.com', 'Information');
                 // $mail->addCC('cc@example.com');
