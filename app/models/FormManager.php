@@ -4,7 +4,7 @@ namespace Projet\Models;
 // use PHPMailer\PHPMailer\PHPMailer;
 // use PHPMailer\PHPMailer\SMTP;
 // use PHPMailer\PHPMailer\Exception;
-use SendGrig;
+// use SendGrig;
 
 /*
                                 | ----------------------------------FORMMANAGER------------------------------------ | 
@@ -17,7 +17,7 @@ use SendGrig;
 class FormManager
 {
 
-    static function contact(){
+    // static function contact(){
     
         // $errors = [];
 
@@ -42,9 +42,9 @@ class FormManager
         //     $_SESSION['success'] = 1;
 
             // data
-            $nom = $_POST['nom'];
-            $email = $_POST['email'];
-            $mess = $_POST['message'];
+            // $nom = $_POST['nom'];
+            // $email = $_POST['email'];
+            // $mess = $_POST['message'];
             // $to = 'stephanie.lemaitre56@gmail.com';
             // $subject = 'Formulaire de contact';
             // $message = "Nom :" .$nom."<br>";
@@ -111,24 +111,46 @@ class FormManager
             
             // header('location: index.php?action=contact');
 
-            $email = new \SendGrid\Mail\Mail(); 
-            $email->setFrom("stephanie.lemaitre56@gmail.com", "Example User");
-            $email->setSubject("Sending with SendGrid is Fun");
-            $email->addTo("stephanie.lemaitre56@gmail.com", "Example User");
-            $email->addContent("text/plain", "and easy to do anywhere, even with PHP");
-            $email->addContent(
-                "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
-            );
-            $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
-            try {
-                $response = $sendgrid->send($email);
-                print $response->statusCode() . "\n";
-                print_r($response->headers());
-                print $response->body() . "\n";
-            } catch (\Exception $e) {
-                echo 'Caught exception: '. $e->getMessage() ."\n";
-            }
-        }
+        //     $email = new \SendGrid\Mail\Mail(); 
+        //     $email->setFrom("stephanie.lemaitre56@gmail.com", "Example User");
+        //     $email->setSubject("Sending with SendGrid is Fun");
+        //     $email->addTo("stephanie.lemaitre56@gmail.com", "Example User");
+        //     $email->addContent("text/plain", "and easy to do anywhere, even with PHP");
+        //     $email->addContent(
+        //         "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
+        //     );
+        //     $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
+        //     try {
+        //         $response = $sendgrid->send($email);
+        //         print $response->statusCode() . "\n";
+        //         print_r($response->headers());
+        //         print $response->body() . "\n";
+        //     } catch (\Exception $e) {
+        //         echo 'Caught exception: '. $e->getMessage() ."\n";
+        //     }
+        // }
+
+        static function createContact(Form $form)
+    {
+        // Pour créer un commentaire
+        // On se connecte à la base de donnée
+        $db = DbConnexion::openConnexion();
+
+        // On insére dans la table commentaire le pseudo, la date de création, la date de mise à jour, le article_id
+        $request = "INSERT INTO contact (email, nom, message) VALUES ";
+        $request .= '( "' . $form->getEmail() . '", "' . $form->getNom() . '", "' . $form->getMessage() .'");';
+        
+        // On prépare et exécute la requête
+        $stmt = $db->prepare($request);
+        $stmt->execute();
+
+        // On insére dans la variable $lastId l'identifiant de la dernière valeur
+        $lastId = $db->lastInsertId();
+
+        $form->setId($lastId);
+        $db = DbConnexion::closeConnexion();
+
+    }
     }
 // }
 
