@@ -26,6 +26,10 @@
                             <a title="Voir la liste des articles" href='admin.php?action=ancien'> Anciens Articles
                             </a>
                         </li>
+                        <li class="nav">
+                            <a title="Voir la liste des articles" href='admin.php?action=ancien'> Emails Reçus
+                            </a>
+                        </li>
                     </ul>
             </div>
         </nav>

@@ -10,7 +10,8 @@ namespace Projet\Controllers;
                                 |                             4/ Fonction supprimer                                 | 
                                 |                             5/ Fonction login                                     |
                                 |                             6/ Fonction inscription                               |                                
-                                |                             7/ Fonction compteAdmin                               |                                                             
+                                |                             7/ Fonction compteAdmin                               |     
+                                |                             8/ Fonction listMails                                 |                                                          
                                 |                                                                                   |
                                 |-----------------------------------------------------------------------------------|
 */
@@ -137,6 +138,21 @@ class AdminController
         \Projet\Models\AdminManager::logout();
         header("Location: index.php?action=accueil");
     
+    }
+
+//                              |----------------------------- 8/ Fonction listMails -----------------------------|
+
+
+    public function listMails()
+    {
+        $title = "Administration - Trouver vos mails ";
+        $description = "Sur cette page vous trouverez la liste de tous les mails reçus !";
+
+        $formManager = new \Projet\Models\FormManager();
+        $mailsAllList = $formManager->readAllContact();
+
+        require "./app/views/backOffice/listMails.php";
+
     }
       
     
