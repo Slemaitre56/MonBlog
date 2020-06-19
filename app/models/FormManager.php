@@ -18,27 +18,27 @@ class FormManager
 
     static function contact(){
     
-        $errors = [];
+        // $errors = [];
 
-        if(!array_key_exists('nom', $_POST) || $_POST['nom'] == ''){
-            $errors['nom'] = "Vous n'avez pas renseigné votre nom";
-        }
+        // if(!array_key_exists('nom', $_POST) || $_POST['nom'] == ''){
+        //     $errors['nom'] = "Vous n'avez pas renseigné votre nom";
+        // }
 
-        if(!array_key_exists('email', $_POST) || $_POST['email'] == '' || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-            $errors['email'] = "Vous n'avez pas renseigné correctement votre email";
-        }
+        // if(!array_key_exists('email', $_POST) || $_POST['email'] == '' || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+        //     $errors['email'] = "Vous n'avez pas renseigné correctement votre email";
+        // }
 
-        if(!array_key_exists('message', $_POST) || $_POST['message'] == ''){
-            $errors['message'] = "Vous n'avez pas renseigné votre message";
-        }
+        // if(!array_key_exists('message', $_POST) || $_POST['message'] == ''){
+        //     $errors['message'] = "Vous n'avez pas renseigné votre message";
+        // }
 
-        if(!empty($errors)){
+        // if(!empty($errors)){
             
-            $_SESSION['errors'] = $errors;
-            $_SESSION['inputs'] = $_POST;
-            header('location: index.php?action=contact');
-        }else{
-            $_SESSION['success'] = 1;
+        //     $_SESSION['errors'] = $errors;
+        //     $_SESSION['inputs'] = $_POST;
+        //     header('location: index.php?action=contact');
+        // }else{
+        //     $_SESSION['success'] = 1;
 
             // data
             $nom = $_POST['nom'];
@@ -93,8 +93,8 @@ class FormManager
                 $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
                 //Recipients
-                $mail->setFrom('from@example.com', 'Formulaire de contact');
-                $mail->addAddress($email, $nom);     // Add a recipient
+                $mail->setFrom('noreply@AustraZelandia.com', 'Formulaire de contact');
+                $mail->addAddress('stephanie.lemaitre56@gmail.com');     // Add a recipient
                 // $mail->addReplyTo('info@example.com', 'Information');
                 // $mail->addCC('cc@example.com');
                 // $mail->addBCC('bcc@example.com');
@@ -106,7 +106,7 @@ class FormManager
                 // Content
                 $mail->isHTML(true);                                  // Set email format to HTML
                 $mail->Subject = 'Here is the subject';
-                $mail->Body = $message;
+                $mail->Body = "blablabla";
                 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
                 $mail->send();
@@ -118,7 +118,7 @@ class FormManager
             header('location: index.php?action=contact');
         }
     }
-}
+// }
 
 
 
