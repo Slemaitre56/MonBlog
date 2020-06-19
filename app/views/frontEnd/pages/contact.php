@@ -15,18 +15,15 @@
         vous m'adorez ? Alors laissez moi un message et je vous répondrai dès que
         possible !
     </p>
-    <?php 
-        if(isset($errors)) :
+    <?php if(isset($errors)) :
             if($errors) : 
-            foreach($errors as $error) : 
-    ?>
-            <div class="erreur">
-                <?= $error ?>
-            </div>
-    <?php
-        endforeach; 
-        else : 
-    ?>
+            foreach($errors as $error) : ?>
+                <div class="erreur"><?= $error ?></div>
+            <?php
+            endforeach; 
+            else : ?>
+                <div class="validation">Confirmation de l'envoi de votre Message !</div>
+            <?php endif; endif ?>
     <!-- Formulaire du contact  -->
     <form class="contact" action="form" method="POST">
         <div class="infosPerso">
