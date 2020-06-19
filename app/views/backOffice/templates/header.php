@@ -27,7 +27,7 @@
                             </a>
                         </li>
                         <li class="nav">
-                            <a title="Voir la liste des articles" href='admin.php?action=mail'> Emails Reçus
+                            <a title="Voir la liste des mails" href='admin.php?action=mail'> Emails Reçus
                             </a>
                         </li>
                     </ul>

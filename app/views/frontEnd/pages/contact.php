@@ -13,9 +13,20 @@
     <h1>Contact</h1>
     <p class="ssTitre">Vous avez une question ? Vous voulez me dire à quel point
         vous m'adorez ? Alors laissez moi un message et je vous répondrai dès que
-        possible !</p>
-
-
+        possible !
+    </p>
+    <?php 
+        if(isset($errors)) :
+            if($errors) : 
+            foreach($errors as $error) : 
+    ?>
+            <div class="erreur">
+                <?= $error ?>
+            </div>
+    <?php
+        endforeach; 
+        else : 
+    ?>
     <!-- Formulaire du contact  -->
     <form class="contact" action="form" method="POST">
         <div class="infosPerso">
