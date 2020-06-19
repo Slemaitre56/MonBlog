@@ -108,7 +108,6 @@ class Controller{
         $articleManager = new \Projet\Models\ArticleManager();
         $article = $articleManager->readOneArticle();
         
-
         require "./app/views/frontEnd/pages/article.php";
         
     }
@@ -120,8 +119,8 @@ class Controller{
 
     function form(){
         $form = new \Projet\Models\Form($_REQUEST['email'],$_REQUEST['nom'],$_REQUEST['message']);
-        
-        
+        \Projet\Models\FormManager::createContact($form);
+        require "./app/views/frontEnd/pages/contact.php";
     }
 
     
