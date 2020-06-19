@@ -1,7 +1,9 @@
 <?php 
 namespace Projet\Models;
 
-use SendGrid;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
 /*
                                 | ----------------------------------FORMMANAGER------------------------------------ | 
@@ -54,24 +56,64 @@ class FormManager
        
             // mail($to, $subject, $message, $headers);
             // Contenu
-            $from = new \SendGrid\Mail\Mail("Stéphanie Lemaitre","stephanie.lemaitre56@gmail.com");
-            $subject = "Formulaire de contact";
-            $to = new \SendGrid\Mail\Mail("Stéphanie Lemaitre","dev.stephaniel@gmail.com");
-            $content = new \SendGrid\Mail\Content("text\html","
-            Email : {$email}<br>
-            Utilisateur : {$nom}<br>
-            Message : {$message}
-            ");
+            // $from = new \SendGrid\Mail\Mail("Stéphanie Lemaitre","stephanie.lemaitre56@gmail.com");
+            // $subject = "Formulaire de contact";
+            // $to = new \SendGrid\Mail\Mail("Stéphanie Lemaitre","dev.stephaniel@gmail.com");
+            // $content = new \SendGrid\Mail\Content("text\html","
+            // Email : {$email}<br>
+            // Utilisateur : {$nom}<br>
+            // Message : {$message}
+            // ");
 
-            // Envoi du mail
-            $mail = new \SendGrid\Mail\Mail($from,$subject,$to,$content);
-            $apiKey = getenv("SENDGRID_API_KEY");
-            $sg = new \SendGrid($apiKey);
+            // // Envoi du mail
+            // $mail = new \SendGrid\Mail\Mail($from,$subject,$to,$content);
+            // $apiKey = getenv("SENDGRID_API_KEY");
+            // $sg = new \SendGrid($apiKey);
 
-            $response = $sg->client->mail()->send()->post($mail);
-            echo $response->statusCode();
-            echo $response->headers();
-            echo $response->body();
+            // $response = $sg->client->mail()->send()->post($mail);
+            // echo $response->statusCode();
+            // echo $response->headers();
+            // echo $response->body();
+
+
+
+            // Instantiation and passing `true` enables exceptions
+
+            $mail = new PHPMailer(true);
+
+            try {
+                //Server settings
+                $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
+                $mail->isSMTP();                                            // Send using SMTP
+                $mail->Host       = 'smtp.sendgrid.net';                    // Set the SMTP server to send through
+                $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+                $mail->Username   = 'apikey';                     // SMTP username
+                $mail->Password   = $_ENV["SENDGRID_API_KEY"];                               // SMTP password
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+                $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+
+                //Recipients
+                $mail->setFrom('from@example.com', 'Formulaire de contact');
+                $mail->addAddress($email, $nom);     // Add a recipient
+                // $mail->addReplyTo('info@example.com', 'Information');
+                // $mail->addCC('cc@example.com');
+                // $mail->addBCC('bcc@example.com');
+
+                // Attachments
+                // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+                // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+
+                // Content
+                $mail->isHTML(true);                                  // Set email format to HTML
+                $mail->Subject = 'Here is the subject';
+                $mail->Body = $message;
+                $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+                $mail->send();
+                echo 'Message has been sent';
+            } catch (Exception $e) {
+                echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            }
             
             header('location: index.php?action=contact');
         }
