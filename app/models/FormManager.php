@@ -45,36 +45,36 @@ class FormManager
             $nom = $_POST['nom'];
             $email = $_POST['email'];
             $mess = $_POST['message'];
-            $to = 'stephanie.lemaitre56@gmail.com';
-            $subject = 'Formulaire de contact';
-            $message = "Nom :" .$nom."<br>";
-            "Mail :" .$email."<br>";
-            "Message :" .$mess;
-            ;
-            $headers = 'From: webmaster@example.com' . "\r\n" .
-            'Reply-To: webmaster@example.com' . "\r\n" .
-            'X-Mailer: PHP/' . phpversion();
+            // $to = 'stephanie.lemaitre56@gmail.com';
+            // $subject = 'Formulaire de contact';
+            // $message = "Nom :" .$nom."<br>";
+            // "Mail :" .$email."<br>";
+            // "Message :" .$mess;
+            // ;
+            // $headers = 'From: webmaster@example.com' . "\r\n" .
+            // 'Reply-To: webmaster@example.com' . "\r\n" .
+            // 'X-Mailer: PHP/' . phpversion();
        
-            mail($to, $subject, $message, $headers);
-            // Contenu
-            $from = new \SendGrid\Mail\Mail("Stéphanie Lemaitre","stephanie.lemaitre56@gmail.com");
-            $subject = "Formulaire de contact";
-            $to = new \SendGrid\Mail\Mail("Stéphanie Lemaitre","dev.stephaniel@gmail.com");
-            $content = new \SendGrid\Mail\Content("text\html","
-            Email : {$email}<br>
-            Utilisateur : {$nom}<br>
-            Message : {$message}
-            ");
+            // mail($to, $subject, $message, $headers);
+            // // Contenu
+            // $from = new \SendGrid\Mail\Mail("Stéphanie Lemaitre","stephanie.lemaitre56@gmail.com");
+            // $subject = "Formulaire de contact";
+            // $to = new \SendGrid\Mail\Mail("Stéphanie Lemaitre","dev.stephaniel@gmail.com");
+            // $content = new \SendGrid\Mail\Content("text\html","
+            // Email : {$email}<br>
+            // Utilisateur : {$nom}<br>
+            // Message : {$message}
+            // ");
 
-            // Envoi du mail
-            $mail = new \SendGrid\Mail\Mail($from,$subject,$to,$content);
-            $apiKey = getenv("SENDGRID_API_KEY");
-            $sg = new \SendGrid($apiKey);
+            // // Envoi du mail
+            // $mail = new \SendGrid\Mail\Mail($from,$subject,$to,$content);
+            // $apiKey = getenv("SENDGRID_API_KEY");
+            // $sg = new \SendGrid($apiKey);
 
-            $response = $sg->client->mail()->send()->post($mail);
-            echo $response->statusCode();
-            echo $response->headers();
-            // echo $response->body();
+            // $response = $sg->client->mail()->send()->post($mail);
+            // echo $response->statusCode();
+            // echo $response->headers();
+            // // echo $response->body();
 
 
 
@@ -110,6 +110,24 @@ class FormManager
             // }
             
             // header('location: index.php?action=contact');
+
+            $email = new \SendGrid\Mail\Mail(); 
+            $email->setFrom("stephanie.lemaitre56@gmail.com", "Example User");
+            $email->setSubject("Sending with SendGrid is Fun");
+            $email->addTo("stephanie.lemaitre56@gmail.com", "Example User");
+            $email->addContent("text/plain", "and easy to do anywhere, even with PHP");
+            $email->addContent(
+                "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
+            );
+            $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
+            try {
+                $response = $sendgrid->send($email);
+                print $response->statusCode() . "\n";
+                print_r($response->headers());
+                print $response->body() . "\n";
+            } catch (\Exception $e) {
+                echo 'Caught exception: '. $e->getMessage() ."\n";
+            }
         }
     }
 // }
