@@ -119,7 +119,7 @@ class Controller{
 
 
     function form(){
-        $form = new \Projet\Models\Form($_REQUEST['user_pseudo'],$_REQUEST['message'],$_REQUEST['articleId']);
+        $form = new \Projet\Models\Form($_REQUEST['email'],$_REQUEST['nom'],$_REQUEST['message']);
         \Projet\Models\FormManager::createContact($form);
         
     }

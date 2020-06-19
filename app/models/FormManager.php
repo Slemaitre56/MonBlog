@@ -151,6 +151,40 @@ class FormManager
         $db = DbConnexion::closeConnexion();
 
     }
+    // Fonction afficher tous les mails
+    public function readAllContact(): array
+    {
+        // On se connecte à la base de donnée
+        $db = DbConnexion::openConnexion();
+
+        // Après avoir tout sélectionné dans la table article
+        // On le stoocke dans un tableau
+        $mailsAllList = [];
+
+        // On séléctionne tout dans la table article
+        $request = "SELECT * FROM article" ;
+
+        // On prépare et exécute la requête
+        $stmt = $db->prepare($request);
+        $stmt->execute();
+
+        /*
+         On crée une boucle tant que ...
+         FETCH-ASSOC = mode de récupération de données qui retourne un tableau indéxé par colonne
+         Ne permet pas d'appeler plusieurs colonnes du même nom
+        */
+        while ($mailsFromDb = $stmt->fetch(\PDO::FETCH_ASSOC)) {
+            // On instancie un nouvel article
+            $articleAll = new Article($mailsFromDb['email'], $mailsFromDb['nom'], $mailsFromDb['message']);
+            $articleAll->setId($mailsFromDb['id']);
+
+            $mailsAllList [] = $articleAll;
+        }
+
+        $db = DbConnexion::closeConnexion();
+
+        return $mailsAllList;
+    }
     }
 // }
 
