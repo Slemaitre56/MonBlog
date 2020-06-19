@@ -95,13 +95,6 @@ class FormManager
                 //Recipients
                 $mail->setFrom('stephanie.lemaitre56@gmail.com', 'Formulaire de contact');
                 $mail->addAddress('stephanie.lemaitre56@gmail.com');     // Add a recipient
-                // $mail->addReplyTo('info@example.com', 'Information');
-                // $mail->addCC('cc@example.com');
-                // $mail->addBCC('bcc@example.com');
-
-                // Attachments
-                // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-                // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
                 // Content
                 $mail->isHTML(true);                                  // Set email format to HTML
@@ -115,7 +108,7 @@ class FormManager
                 echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
             }
             
-            header('location: index.php?action=contact');
+            // header('location: index.php?action=contact');
         }
     }
 // }
