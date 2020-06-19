@@ -10,42 +10,33 @@
 
 <!-- MAIN -->
 <main class="container">
-    <h1 class="titreAdmin">Anciens Articles</h1>
-    <!-- Tableau qui liste tous les articles du blog -->
+    <h1 class="titreAdmin">Anciens mails</h1>
+    <!-- Tableau qui liste tous les mails du blog -->
     <div class="tableau">
         <table>
             <tr class="hautTableau">
-                <td>Titre de l'article</td>
-                <td>Nom de la page</td>
-                <td>Modifier</td>
-                <td>Supprimer</td>
+                <td>Adresse Mail</td>
+                <td>Nom de l'utilisateur</td>
+                <td>Messager</td>
+
             </tr>
-            <!-- Si il existe des articles alors j'affiche avec une boucle(pour chaque) -->
+            <!-- Si il existe des mails alors j'affiche avec une boucle(pour chaque) -->
             <?php 
-            if (!empty($articlesAllList)):
-                foreach ($articlesAllList as $articleAll) :
+            if (!empty($mailsAllList)):
+                foreach ($mailsAllList as $mailAll) :
             ?>
             <tr>
-                <!-- Pour chaque article je récupère avec un getter(voir models article) le titre, la refpage, le id-->
-                <td><?= $articleAll->getTitle() ?></td>
-                <td><?= $articleAll->getRefPage() ?></td>
-                <td>
-                    <a title="Modifier cet article" href="admin.php?action=modifier&id=<?= $articleAll->getId(); ?>">
-                        <i class="material-icons" style="font-size:36px">cached</i>
-                    </a>
-                </td>
-                <td>
-                    <a title="Supprimer cet article" href="admin.php?action=supprimer&id=<?= $articleAll->getId(); ?>">
-                        <i class="material-icons" style="font-size:36px">delete</i>
-                    </a>
-                </td>
+                <!-- Pour chaque mail je récupère avec un getter(voir models mail) le mail, le nom ... -->
+                <td><?= $mailAll->getEmail() ?></td>
+                <td><?= $mailAll->getNom() ?></td>
+                <td><?= $mailAll->getMessage() ?></td>
             </tr>
             <?php
                  endforeach;
             else:
             ?>
             <!-- Sinon j'affiche un message -->
-            <i>Aucun article n'a encore été publié</i>
+            <i>Aucun mail n'a encore été publié</i>
             <?php
             endif;
             ?>
