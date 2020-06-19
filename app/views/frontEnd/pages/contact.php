@@ -17,7 +17,7 @@
 
 
     <!-- Formulaire du contact  -->
-    <form class="contact" action="?action=form" method="POST">
+    <form class="contact" action="form" method="POST">
         <div class="infosPerso">
             <!-- Nom -->
             <label class="labelContact" for="nom">Nom :</label>
