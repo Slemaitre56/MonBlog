@@ -50,7 +50,7 @@ function updateArticle(){
     }else{
         $title = "Administration - Créer un article ";
         $description = "Sur cette page vous pouvez créer un article !";
-        header('Location: /admin.php?action=updateid=<?= $article->getId(); ?>');
+        header('Location: /admin.php?action=update&id=<?= $article->getId(); ?>');
     }
 }
 
