@@ -1175,7 +1175,7 @@ td {
     }
 }
 
-@media screen and (max-width:1000px) {
+@media screen and (min-width:850px) {
     /* -----------header------------- */
     .menu-principal {
         width: 80%;
@@ -1262,7 +1262,7 @@ td {
         width: 60%;
     }
 }
-@media screen and (max-width:1415px) {
+@media screen and (min-width:1415px) {
 
     /* -------------Menu principal------------- */
     .menu-principal {
