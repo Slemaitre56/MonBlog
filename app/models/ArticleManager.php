@@ -286,6 +286,6 @@ foreach ( $articleFromDb as $result) {
             } else {
                 $errors[] = "Le format de votre image est incorrect ! jpg, png et jpeg uniquement !";
             }
-        }
+        }return $errors;
     }
 }
