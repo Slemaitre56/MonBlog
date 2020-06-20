@@ -50,7 +50,7 @@ function updateArticle(){
     }else{
         $title = "Administration - Créer un article ";
         $description = "Sur cette page vous pouvez créer un article !";
-        require "./app/views/backOffice/update.php";
+        header('Location: /admin.php?action=updateid=<?= $article->getId(); ?>');
     }
 }
 
@@ -60,11 +60,11 @@ function updateArticle(){
 
 
 
-function deleteArticle(){
-    
-    \Projet\Models\ArticleManager::deleteArticle($_GET["id"]);
-    header('Location: /admin.php?action=ancien');
-    
-}
+    function deleteArticle(){
+        
+        \Projet\Models\ArticleManager::deleteArticle($_GET["id"]);
+        header('Location: /admin.php?action=ancien');
+        
+    }
 
 }
