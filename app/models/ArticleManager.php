@@ -233,7 +233,7 @@ foreach ( $articleFromDb as $result) {
     public static function addImage($article, $action)
     {
         $db = DbConnexion::openConnexion();
-        
+        $errors = [];
         if (!empty($_FILES)) {
             $image = $_FILES["image"]["name"];
             $imageTmp = $_FILES["image"]["tmp_name"];
@@ -280,11 +280,11 @@ foreach ( $articleFromDb as $result) {
                         unset($_POST['content']);                     
                     }
                 } else {
-                    return "Votre image est trop lourde ! 1Mo max !";
+                    $errors[] = "Votre image est trop lourde ! 1Mo max !";
                     
                 }
             } else {
-                return "Le format de votre image est incorrect ! jpg, png et jpeg uniquement !";
+                $errors[] = "Le format de votre image est incorrect ! jpg, png et jpeg uniquement !";
             }
         }
     }
