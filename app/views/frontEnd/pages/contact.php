@@ -18,12 +18,20 @@
     <?php if(isset($errors)) :
             if($errors) : 
             foreach($errors as $error) : ?>
-                <div class="erreur"><?= $error ?></div>
+                <div class="errorEditer">
+                    <?= $error ?>
+                </div>
             <?php
             endforeach; 
-            else : ?>
-                <div class="validation">Confirmation de l'envoi de votre Message !</div>
-            <?php endif; endif ?>
+            else : 
+            ?>
+                <div class="validation">
+                    Confirmation de l'envoi de votre Message !
+                </div>
+            <?php
+                endif; 
+                endif 
+            ?>
     <!-- Formulaire du contact  -->
     <form class="contact" action="form" method="POST">
         <div class="infosPerso">

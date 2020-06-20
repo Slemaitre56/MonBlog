@@ -1,10 +1,6 @@
 <?php 
 namespace Projet\Models;
 
-// use PHPMailer\PHPMailer\PHPMailer;
-// use PHPMailer\PHPMailer\SMTP;
-// use PHPMailer\PHPMailer\Exception;
-// use SendGrig;
 
 /*
                                 | ----------------------------------FORMMANAGER------------------------------------ | 

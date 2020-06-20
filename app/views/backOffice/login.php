@@ -35,4 +35,6 @@
 </main>
 
 <!-- Appel le template footer -->
-<?php require "./app/views/backOffice/templates/footer.php"; ?>
+        <?php require "./app/views/backOffice/templates/footer.php"; ?>
+    </body>
+</html>

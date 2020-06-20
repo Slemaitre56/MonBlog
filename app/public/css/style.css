@@ -541,6 +541,13 @@ footer a {
     font-size: 1.3rem;
     color: #cd2e6a;
 }
+.validation{
+    position: absolute;
+    top: 39%;
+    right: 35%;
+    font-size: 1.3rem;
+    color: #06b93c;
+}
 
 /*                              |-------------------------------------- ANCIEN ---------------------------------------|                                  */
 .tableau {

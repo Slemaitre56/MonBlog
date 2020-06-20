@@ -17,7 +17,7 @@
             <tr class="hautTableau">
                 <td>Adresse Mail</td>
                 <td>Nom de l'utilisateur</td>
-                <td>Messager</td>
+                <td>Message</td>
 
             </tr>
             <!-- Si il existe des mails alors j'affiche avec une boucle(pour chaque) -->
@@ -45,5 +45,7 @@
 </main>   
 
 <!-- Appel le template footer -->
-<?php include './app/views/backOffice/templates/footer.php'; ?>
-<script>menuAct(2); </script>
+        <?php include './app/views/backOffice/templates/footer.php'; ?>
+        <script>menuAct(2); </script>
+    </body>
+</html>

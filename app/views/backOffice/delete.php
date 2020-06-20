@@ -21,5 +21,7 @@
 </main>
 
 <!-- Appel le template footer -->
-<?php include 'app/views/backOffice/templates/footer.php'; ?>
-<script> menuAct(1); </script>
+        <?php include 'app/views/backOffice/templates/footer.php'; ?>
+        <script> menuAct(1); </script>
+    </body>
+</html>
