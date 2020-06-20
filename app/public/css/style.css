@@ -1148,6 +1148,8 @@ td {
         text-align: none;
     }
     .errorEditer {
+        width: 60%;
+        text-align: center;
         position: absolute;
         top: 55%;
         right: 27%;
@@ -1155,6 +1157,8 @@ td {
         color: #cd2e6a;
     }
     .validation {
+        width: 60%;
+        text-align: center;
         position: absolute;
         top: 55%;
         right: 27%;
