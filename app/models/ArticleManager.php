@@ -26,13 +26,8 @@ class ArticleManager extends DbConnexion
     // Fonction créer un article via la class Article
    public static function createArticle(Article $article)
    {
-    $errors = [];
-    $error = ArticleManager::addImage($article, "create");
-    if($error){
-        array_push($errors, $error);
+    ArticleManager::addImage($article, "create");
     }
-    return $errors;
-}
 
 
 
@@ -193,12 +188,8 @@ foreach ( $articleFromDb as $result) {
     // Fonction mettre à jour un article via la class Article
     public static function updateArticle(Article $article)
     {
-        $errors = [];
-        $error = ArticleManager::addImage($article, "update");
-        if($error){
-            array_push($errors, $error);
-        }
-        return $errors;
+        ArticleManager::addImage($article, "update");
+        
     }
 
 
@@ -280,8 +271,7 @@ foreach ( $articleFromDb as $result) {
                         unset($_POST['content']);                     
                     }
                 } else {
-                    $errors[] = "Votre image est trop lourde ! 1Mo max !";
-                    
+                    $errors[] = "Votre image est trop lourde ! 1Mo max !";    
                 }
             } else {
                 $errors[] = "Le format de votre image est incorrect ! jpg, png et jpeg uniquement !";
