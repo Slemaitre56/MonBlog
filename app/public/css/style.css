@@ -985,6 +985,20 @@ td {
     .btnAdmin input {
         width: 30%;
     }
+    .errorEditer {
+        position: absolute;
+        top: 55%;
+        right: 20%;
+        font-size: 1.2rem;
+        color: #cd2e6a;
+    }
+    .validation{
+        position: absolute;
+        top: 55%;
+        right: 20%;
+        font-size: 1.2rem;
+        color: #06b93c;
+    }
 
     /* ---------------modifier--------------*/
     .tableau {
@@ -1125,6 +1139,20 @@ td {
     .file > label {
         text-align: none;
     }
+    .errorEditer {
+        position: absolute;
+        top: 55%;
+        right: 27%;
+        font-size: 1.2rem;
+        color: #cd2e6a;
+    }
+    .validation{
+        position: absolute;
+        top: 55%;
+        right: 27%;
+        font-size: 1.2rem;
+        color: #06b93c;
+    }
 
     /* ---------------modifier--------------*/
     .tableau {
@@ -1180,6 +1208,7 @@ td {
     .file > label {
         font-size: 1rem;
     }
+
     /* ---------------BTn top--------------*/
     #myBtn {
         bottom: 50px;
@@ -1265,6 +1294,20 @@ td {
     }
     .labelContact {
         width: 100%;
+    }
+    .errorEditer {
+        position: absolute;
+        top: 45%;
+        right: 30%;
+        font-size: 1.2rem;
+        color: #cd2e6a;
+    }
+    .validation{
+        position: absolute;
+        top: 45%;
+        right: 30%;
+        font-size: 1.2rem;
+        color: #06b93c;
     }
     /* ---------------inscription/connexion--------------*/
     .formInscrip {
