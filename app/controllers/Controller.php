@@ -28,7 +28,6 @@ class Controller{
     function accueil() { 
         $title = "Mon blog Austra-Zelandia ";
         $description = "Bienvenue sur le blog sur mon voyage en Australie et en Nouvelle-Zelande !";   
-        
         require "./app/views/frontEnd/pages/accueil.php";
     }
 
@@ -44,8 +43,6 @@ class Controller{
         
         $articleManager = new \Projet\Models\ArticleManager();
         $articlesList = $articleManager->readArticles($_REQUEST['action']);
-        // $commentManager = new \Projet\Models\CommentManager();
-        // $commentsList = $commentManager->readComments($_REQUEST['action']);
         
         require "./app/views/frontEnd/pages/australie.php";
         
@@ -64,9 +61,6 @@ class Controller{
         $articleManager = new \Projet\Models\ArticleManager();
         $articlesList = $articleManager->readArticles($_REQUEST['action']);
 
-        // $commentManager = new \Projet\Models\CommentManager();
-        // $commentsList = $commentManager->readComments($_REQUEST['action']);
-
         require "./app/views/frontEnd/pages/n-Zelande.php";
         
     }
@@ -84,9 +78,6 @@ class Controller{
         $articleManager = new \Projet\Models\ArticleManager();
         $articlesList = $articleManager->readArticles($_REQUEST['action']);
 
-        // $commentManager = new \Projet\Models\CommentManager();
-        // $commentsList = $commentManager->readComments($_REQUEST['action']);
-
         require "./app/views/frontEnd/pages/trucs.php";
         
     }
@@ -100,7 +91,6 @@ class Controller{
     function contact() {
         $title = "Mon blog Austra-Zelandia - Contact ";
         $description = "Vous trouverez ici tous mes articles sur l'Australie !";
-
         require "./app/views/frontEnd/pages/contact.php";
     
     }
@@ -118,7 +108,6 @@ class Controller{
         $articleManager = new \Projet\Models\ArticleManager();
         $article = $articleManager->readOneArticle();
         
-
         require "./app/views/frontEnd/pages/article.php";
         
     }
@@ -129,8 +118,11 @@ class Controller{
 
 
     function form(){
-        $formManager = new \Projet\Models\FormManager();
-        $contact = $formManager->contact();
+        $form = new \Projet\Models\Form($_REQUEST['email'],$_REQUEST['nom'],$_REQUEST['message']);
+        $objet = new \Projet\Models\FormManager();
+        $errors = $objet->createContact($form);
+        require "./app/views/frontEnd/pages/contact.php";
+        
         
     }
 
@@ -141,6 +133,8 @@ class Controller{
 
 
     function cgu(){
+        $title = "Mon blog Austra-Zelandia - Article ";
+        $description = "Vous trouverez ici le cgu !";
         require "./app/views/frontEnd/pages/cgu.php"; 
     }
 

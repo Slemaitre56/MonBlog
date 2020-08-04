@@ -67,6 +67,8 @@ if (file_exists(__DIR__ . "/.env")) {
             $controllerArticle->deleteArticle();
         }elseif($_GET["action"] == "logout"){
             $controllerAdmin->logoutAdmin();
+        }elseif($_GET["action"] == "mail"){
+            $controllerAdmin->listMails();
         }
     }else{
         $controllerAdmin->loginAdmin();        

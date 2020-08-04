@@ -16,7 +16,7 @@
             <a
                 title="Notre politique des cookies"
                 id='cookie-policy'
-                href='index.php?action=cookie'>
+                href='cookie'>
                 Consulter notre politique des cookies !
             </a>
         </div>

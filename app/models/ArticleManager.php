@@ -254,12 +254,21 @@ foreach ( $articleFromDb as $result) {
                     if($action === "create"){
                         // On insére dans la table 'article' le titre, l'image, la date de création, la
                         // date de mise à jour, le contenu, la ref-page
-                        $request = "INSERT INTO article (title, image, creation_date, update_date, content, ref_page) VALUES ";
-                        $request .= '( "'.$article->getTitle().'", "'.$image.'","'.$article->getCreationDate().'", "'.$article->getUpdateDate().'", "'.$article->getContent().'", "'.$article->getRefPage().'");';
+                        $request = "INSERT INTO article (title, image, creation_date, update_date, content, ref_page) VALUES (:titre, :image, :creation_date, :update_date, :contenu, :ref_page";
+                        // $request .= '( "'.$article->getTitle().'", "'.$image.'","'.$article->getCreationDate().'", "'.$article->getUpdateDate().'", "'.$article->getContent().'", "'.$article->getRefPage().'");';
         
                         // On prépare et exécute la requête
                         $stmt = $db->prepare($request);
-                        $stmt->execute();
+                        $stmt->execute(
+                            [
+                                'titre'=>htmlentities($article->getTitle()),
+                                'image'=>htmlentities($image),
+                                'creation_date'=>$article->getCreationDate(),
+                                'update_date'=>$article->getUpdateDate(),
+                                'contenu'=>htmlentities($article->getContent()),
+                                'ref_page'=>$article->getRefPage()
+                            ]
+                        );
         
                         // On insére dans la variable $lastId l'identifiant de la dernière valeur
                         $lastId = $db->lastInsertId();
@@ -275,10 +284,13 @@ foreach ( $articleFromDb as $result) {
                         // On prépare et exécute la requête
                         $stmt = $db->prepare($request);
                         $stmt->execute($params);
-                        $db = DbConnexion::closeConnexion();                     
+                        $db = DbConnexion::closeConnexion();
+                        unset($_POST['title']);
+                        unset($_POST['content']);                     
                     }
                 } else {
                     return "Votre image est trop lourde ! 1Mo max !";
+                    
                 }
             } else {
                 return "Le format de votre image est incorrect ! jpg, png et jpeg uniquement !";

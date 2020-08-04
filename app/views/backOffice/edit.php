@@ -12,15 +12,19 @@
 <!-- MAIN -->
 <main class="container">
     <!-- ERRORS -->
-    <div class="errorEditer">
     <?php 
-    if(!empty($errors)){
-        foreach ($errors as $error) {
-        echo $error;
-    }
-    }
+    if(isset($errors)) :
+        if($errors) : 
+            foreach($errors as $error) : 
     ?>
-    </div>  
+        <div class="errorEditer">
+            <?= $error ?>
+        </div>
+    <?php
+        endforeach; 
+        endif;
+        endif 
+    ?> 
     <h1 class="titreAdmin">Nouvel article</h1>
     <!-- Formulaire pour créer un nouvel article -->
     <form class="formAdmin" action="admin.php?action=create" method="POST" enctype="multipart/form-data" >
@@ -67,5 +71,7 @@
 </main>
 
 <!-- Appel des templates footer -->
-<?php include './app/views/backOffice/templates/footer.php'; ?>
-<script>menuAct(0); </script>
+        <?php include './app/views/backOffice/templates/footer.php'; ?>
+        <script>menuAct(0); </script>
+    </body>
+</html>

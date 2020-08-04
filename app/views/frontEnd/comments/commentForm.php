@@ -6,7 +6,7 @@
 
 <section class="blocCommentaire">
     
-    <form class="zoneText" action="index.php?action=newComment&articleId=<?= $_GET['id'] ?>" method="POST" accept-charset="utf-8">
+    <form class="zoneText" action="newComment&articleId=<?= $_GET['id'] ?>" method="POST" accept-charset="utf-8">
             <!-- Pseudo -->
             <input id="pseudo" type="text" name="user_pseudo" size="50" maxlength="250" required="required" placeholder="Votre pseudo"/>
             </label>

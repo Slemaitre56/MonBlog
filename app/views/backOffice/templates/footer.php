@@ -14,5 +14,3 @@
         <script src="app/public/js/plugin.js"></script>
         <script src="app/public/js/active.js"></script>
 
-    </body>
-</html>

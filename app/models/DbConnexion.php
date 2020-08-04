@@ -30,7 +30,6 @@ class DbConnexion
 
         // try = bloc qui contient du code pouvant générer des erreurs
         try {
-
         // Voir .env (récupére information dans heroku)
         if (getenv('DB_HOST')) {
             $host = getenv('DB_HOST');
@@ -42,11 +41,9 @@ class DbConnexion
             $dbname =  $_ENV['DB_NAME'];
             $user = $_ENV['DB_USER'];
             $pwd = $_ENV['DB_PASSWORD'];
-        }
-    
+        }  
             // pdo = php data objet
             $pdo = new \PDO('mysql:host='.$host.';dbname='.$dbname.';charset=utf8',$user,$pwd);
-        
             // constantes pour gérer les erreurs
             $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
         }

@@ -6,7 +6,7 @@
 
 <!-- Appel des templates head et hearder -->
 <?php require "app/views/frontEnd/templates/head.php"; ?>
-<?php require "app/views/frontEnd/templates/header.php"; ?>
+<?php require "app/views/frontEnd/templates/header.php";?>
 
 <!-- MAIN -->
 <main class="container">
@@ -53,7 +53,7 @@
                     <li>
                         <img src="./app/public/images/slider2/nouvelleZelande.4.jpg" alt="photo nouvelle-Zelande"></li>
                     <li>
-                        <img src="./app/public/images/slider2/nouvelleZelande.5.jpg" alt="photo nouvelle-Zelande"></li>
+                        <img src="./app/public/images/slider2/nouvelleZelande5.jpg" alt="photo nouvelle-Zelande"></li>
                 </ul>
             </div>
             <div class="intro">

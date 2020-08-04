@@ -8,16 +8,19 @@
 <?php include 'app/views/frontEnd/templates/head.php'; ?>
 <?php include 'app/views/backOffice/templates/header.php'; ?>
 <!-- ERRORS -->
-<div class="errorEditer">
-    <?php   
-    if(!empty($errors)){
-        foreach ($errors as $error) 
-        {
-        echo $error;
-        }
-    }
+    <?php 
+    if(isset($errors)) :
+        if($errors) : 
+            foreach($errors as $error) : 
     ?>
-</div>
+        <div class="errorEditer">
+            <?= $error ?>
+        </div>
+    <?php
+        endforeach; 
+        endif;
+        endif 
+    ?>
 <!-- MAIN -->
 <div class="container">
     <h1 class="titreAdmin">Modifier article</h1>
@@ -73,4 +76,6 @@
 </div>
 
 <!-- Appel le template footer -->
-<?php include 'app/views/backOffice/templates/footer.php'; ?>
+        <?php include 'app/views/backOffice/templates/footer.php'; ?>
+    </body>
+</html>

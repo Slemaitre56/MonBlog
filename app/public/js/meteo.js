@@ -10,8 +10,6 @@
 
         // déclaration de variable pour récupérer la valeur de l'input
         let city = $("#city").val();
-        // déclaration de variable pour récupérer la valeur de la clé mit ans le fichier .creds.js      
-        let token = $_ENV('TOKEN');
 
         // Si la variable city est différent de vide
         if(city != "") {
@@ -20,8 +18,8 @@
             $.ajax({
 
                 // Une api est une url - via les paramètres on récupère les données
-                url: "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric" +
-                        "&APPID=" + token,
+                url: "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric" +
+                        "&APPID=" + phpVars.TOKEN,
 
                 // On récupère les données       
                 type: "GET",
