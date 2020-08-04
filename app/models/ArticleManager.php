@@ -254,11 +254,12 @@ foreach ( $articleFromDb as $result) {
                     if($action === "create"){
                         // On insére dans la table 'article' le titre, l'image, la date de création, la
                         // date de mise à jour, le contenu, la ref-page
-                        $request = "INSERT INTO article (title, image, creation_date, update_date, content, ref_page) VALUES (:titre, :image, :creation_date, :update_date, :contenu, :ref_page";
+                        $request = "INSERT INTO article (title, image, creation_date, update_date, content, ref_page) VALUES(:titre, :image, :creation_date, :update_date, :contenu, :ref_page)";
                         // $request .= '( "'.$article->getTitle().'", "'.$image.'","'.$article->getCreationDate().'", "'.$article->getUpdateDate().'", "'.$article->getContent().'", "'.$article->getRefPage().'");';
         
                         // On prépare et exécute la requête
                         $stmt = $db->prepare($request);
+                        var_dump($stmt);
                         $stmt->execute(
                             [
                                 'titre'=>$article->getTitle(),
