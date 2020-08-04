@@ -52,11 +52,15 @@ class ArticleManager extends DbConnexion
         $articlesList = [];
 
         // On séléctionne tout dans la table article dans la colonne ref_pag = $pageName
-        $request = "SELECT * FROM article WHERE ref_page like '" . $pageName . "';" ;
+        $request = "SELECT * FROM article WHERE ref_page like :pageName" ;
 
         // On prépare et exécute la requête
         $stmt = $db->prepare($request);
-        $stmt->execute();
+        $stmt->execute(
+            [
+                "pageName" => $pageName
+            ]
+        );
 
         /*
          On crée une boucle tant que ...
