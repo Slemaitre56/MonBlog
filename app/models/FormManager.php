@@ -25,12 +25,17 @@ class FormManager
         if(!filter_var($form->getEmail(), FILTER_VALIDATE_EMAIL)){
             $errors[] = 'L\'Adresse Mail n\'est pas Valide !!!';
         }else{
-          $request = "INSERT INTO contact (email, nom, message) VALUES ";
-        $request .= '( "' . $form->getEmail() . '", "' . $form->getNom() . '", "' . $form->getMessage() .'");';
+          $request = "INSERT INTO contact (email, nom, message) VALUES (:email, :nom, :message)";
         
         // On prépare et exécute la requête
         $stmt = $db->prepare($request);
-        $stmt->execute();
+        $stmt->execute(
+            [
+                'nom'=>htmlentities($form->getEmail()),
+                'email'=>htmlentities($form->getNom()),
+                'message'=>htmlentities($form->getMessage()),
+            ]
+        );
 
         // On insére dans la variable $lastId l'identifiant de la dernière valeur
         $lastId = $db->lastInsertId();
