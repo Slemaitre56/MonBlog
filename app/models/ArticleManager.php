@@ -261,11 +261,11 @@ foreach ( $articleFromDb as $result) {
                         $stmt = $db->prepare($request);
                         $stmt->execute(
                             [
-                                'titre'=>htmlentities($article->getTitle()),
-                                'image'=>htmlentities($image),
+                                'titre'=>$article->getTitle(),
+                                'image'=>$image,
                                 'creation_date'=>$article->getCreationDate(),
                                 'update_date'=>$article->getUpdateDate(),
-                                'contenu'=>htmlentities($article->getContent()),
+                                'contenu'=>$article->getContent(),
                                 'ref_page'=>$article->getRefPage()
                             ]
                         );
