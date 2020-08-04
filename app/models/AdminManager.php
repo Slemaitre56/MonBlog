@@ -27,12 +27,16 @@ class AdminManager extends DbConnexion
         // On se connecte à la base de donnée
         $db = DbConnexion::openConnexion();
         // On insére dans la table 'article' le titre, l'image, la date de création, la date de mise à jour, le contenu, la ref-page 
-        $request = "INSERT INTO admin (pseudo, email, password) VALUES ";
-        $request .= '( "' . $connexion->getPseudo() . '", "' . $connexion->getEmail() . '","' . password_hash($connexion->getPassword(), PASSWORD_DEFAULT) . '");';
-        
+        $request = "INSERT INTO admin (pseudo, email, password) VALUES(:pseudo, :email, :password) ";
         // On prépare et exécute la requête
         $stmt = $db->prepare($request);
-        $stmt->execute();
+        $stmt->execute(
+            [
+            'pseudo'=>htmlentities($connexion->getPseudo()),
+            'email'=>htmlentities($connexion->getEmail()),
+            'password'=>password_hash($connexion->getPassword(), PASSWORD_DEFAULT)
+            ]
+        );
           
         $db = DbConnexion::closeConnexion();
         
