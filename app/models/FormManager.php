@@ -31,8 +31,8 @@ class FormManager
         $stmt = $db->prepare($request);
         $stmt->execute(
             [
-                'nom'=>htmlentities($form->getEmail()),
-                'email'=>htmlentities($form->getNom()),
+                'email'=>htmlentities($form->getEmail()),
+                'nom'=>htmlentities($form->getNom()),
                 'message'=>htmlentities($form->getMessage()),
             ]
         );
