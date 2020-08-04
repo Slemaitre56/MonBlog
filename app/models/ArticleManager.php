@@ -259,14 +259,13 @@ foreach ( $articleFromDb as $result) {
         
                         // On prépare et exécute la requête
                         $stmt = $db->prepare($request);
-                        var_dump($stmt);
                         $stmt->execute(
                             [
-                                'titre'=>$article->getTitle(),
-                                'image'=>$image,
+                                'titre'=>htmlentities($article->getTitle()),
+                                'image'=>htmlentities($image),
                                 'creation_date'=>$article->getCreationDate(),
                                 'update_date'=>$article->getUpdateDate(),
-                                'contenu'=>$article->getContent(),
+                                'contenu'=>htmlentities($article->getContent()),
                                 'ref_page'=>$article->getRefPage()
                             ]
                         );
