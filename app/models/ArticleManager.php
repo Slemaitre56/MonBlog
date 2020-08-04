@@ -254,9 +254,7 @@ foreach ( $articleFromDb as $result) {
                     if($action === "create"){
                         // On insére dans la table 'article' le titre, l'image, la date de création, la
                         // date de mise à jour, le contenu, la ref-page
-                        $request = "INSERT INTO article (title, image, creation_date, update_date, content, ref_page) VALUES(:titre, :image, :creation_date, :update_date, :contenu, :ref_page)";
-                        // $request .= '( "'.$article->getTitle().'", "'.$image.'","'.$article->getCreationDate().'", "'.$article->getUpdateDate().'", "'.$article->getContent().'", "'.$article->getRefPage().'");';
-        
+                        $request = "INSERT INTO article (title, image, creation_date, update_date, content, ref_page) VALUES(:titre, :image, :creation_date, :update_date, :contenu, :ref_page)";   
                         // On prépare et exécute la requête
                         $stmt = $db->prepare($request);
                         $stmt->execute(
@@ -279,11 +277,18 @@ foreach ( $articleFromDb as $result) {
                     }
                     elseif($action === "update"){
                         // On fait une mise à jour dans la table article sur le contenu, le titre, l'image, la ref_page, la date
-                        $request = "UPDATE article SET content ='".$article->getContent()."', title ='".$article->getTitle()."', image ='".$image ."',ref_page ='".$article->getRefPage()."', update_date ='".$article->getUpdateDate()."' WHERE id =:id ";
+                        $request = "UPDATE article SET content = :contenu, title = :titre, image = :image, ref_page = :ref_page, update_date = :update_date WHERE id =:id ";
                         $params= array("id"=>$_GET['id']);                      
                         // On prépare et exécute la requête
                         $stmt = $db->prepare($request);
-                        $stmt->execute($params);
+                        $stmt->execute([
+                            "contenu" => nl2br(htmlentities($article->getContent())),   
+                            "titre" => htmlentities($article->getTitle()),
+                            'image'=>htmlentities($image),
+                            "ref_page" => htmlentities($article->getRefPage()),
+                            "update_date" => htmlentities($article->getUpdateDate()),
+                            "id"=>$_GET['id'],
+                        ]);
                         $db = DbConnexion::closeConnexion();
                         unset($_POST['title']);
                         unset($_POST['content']);                     
